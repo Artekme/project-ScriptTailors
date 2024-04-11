@@ -24,11 +24,11 @@
     border-radius: 100px;
     width: 34px;
     height: 34px;
-    stroke: aqua;
+    fill: #FAFAFA;
 }
 
 .open-card-svg{
-    stroke: aqua;
+    fill: #FAFAFA;
 }
 
 .question-faq{
