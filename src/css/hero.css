@@ -43,10 +43,6 @@
   justify-content: center;
 }
 
-.hero-address {
-  /* display: flex; */
-}
-
 .hero-address-list {
   display: flex;
   flex-wrap: wrap;
