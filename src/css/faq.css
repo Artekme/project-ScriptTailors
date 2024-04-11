@@ -2,6 +2,12 @@
     padding-inline-start: 0;
 }
 
+.div-faq{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .title-faq{
     font-family: "Inter Tight", sans-serif;  
     font-weight: 600;
