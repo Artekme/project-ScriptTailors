@@ -16,6 +16,11 @@
     margin-bottom: 32px;
 }
 
+.button-faq{
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 100px;
+}
+
 .question-faq{
     font-family: "Inter Tight",
     sans-serif;
