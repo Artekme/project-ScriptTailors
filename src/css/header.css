@@ -1,0 +1,90 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-top: 32px;
+}
+.logo-link-header {
+  display: flex;
+  gap: 8px;
+}
+/* .logo-image-header {
+} */
+.logo-surname-header {
+  line-height: 1;
+  /*можливо треба буде прибрати після fetchu */
+  margin: 0;
+}
+.navigation {
+  display: none;
+}
+
+/* .item-navigation {
+}
+.link-item-navigation {
+}
+.order_project-navigation {
+}
+.link-order_project-navigation {
+} */
+.mobile-menu-open-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  stroke-width: 2px;
+  /* stroke: #fafafa; */
+  stroke: #d11515;
+}
+/* .mobile-menu-open-btn-icon {
+} */
+
+@media screen and (max-width: 767px) {
+  /*Mobile menu styles*/
+  .mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+      270deg,
+      rgb(28, 29, 32) 49.692%,
+      rgb(105, 41, 45) 67.704%,
+      rgb(237, 59, 68) 99.891%
+    );
+
+    transform: translateX(100%);
+  }
+
+  .mobile-menu-container {
+    position: relative;
+  }
+
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+
+    stroke-width: 2px;
+    stroke: #2ec51a;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-navigation {
+    display: ;
+  }
+  .list-navigation {
+    display: none;
+  }
+}
