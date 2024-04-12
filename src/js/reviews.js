@@ -1,12 +1,14 @@
 import axios from "axios";
 import Swiper from "swiper";
 import {Navigation, Keyboard, Mousewheel} from 'swiper/modules';
-// import 'swiper/swiper-bundle.css'
 import 'swiper/css'
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 Swiper.use([Navigation, Keyboard, Mousewheel]);
 
 
 let swiper;
+const reviewsList = document.querySelector('.review-list')
 
 document.addEventListener('DOMContentLoaded', function(){
     renderReviews()
@@ -20,9 +22,23 @@ async function fetchReviews() {
         });
         return response.data;
     } catch (error) {
-        console.error(error);
-        return [];
+        handleError(error);
     }
+}
+
+function handleError(error) {
+    iziToast.show({
+        fontSize: 'large',
+        position: 'topRight',
+        messageColor: 'white',
+        timeout: 6000,
+        backgroundColor: '#ED3B44',
+        theme: 'dark',
+        progressBar: false,
+        message: 'Something went wrong',
+    });
+    reviewsList.insertAdjacentHTML("beforeend", `<li class="not-found-item">
+    <p class="not-found-text">Not found</p></li>`);
 }
 
 function renderReview({author, avatar_url, review}) {
@@ -56,23 +72,20 @@ async function renderReviews() {
 
 function initSwiper() {
     swiper = new Swiper('.swiper-container', {
+        modules: [Navigation, Keyboard, Mousewheel],
         direction: 'horizontal',
         loop: false,
         autoHeight: true,
-        // centeredSlides: true,
-        // centeredSlidesBounds: true,
-        // centerInsufficientSlides: true,
-        modules: [Navigation, Keyboard, Mousewheel],
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
         slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 16,
-        // freeMode: true,
         keyboard: {
             enabled: true,
-            onlyInViewport: false,
+            onlyInViewport: true,
             pageUpDown: true
         },
         mousewheel: {
@@ -85,18 +98,13 @@ function initSwiper() {
         breakpoints: {
             768: {
                 slidesPerView: 2,
-                // slidesPerGroup: 1,
-                spaceBetween: 16,
-                // width: '704px'
+                slidesPerGroup: 1,
             },
             1400: {
                 slidesPerView: 4,
-                // slidesPerGroup: 1,
-                spaceBetween: 16,
-                // width: '1376px'
+                slidesPerGroup: 1,
             }
-        },
-        // breakpointsBase: 'container',
+        }
         
 })
     updateNavigationButtons();
