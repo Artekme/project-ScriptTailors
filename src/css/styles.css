@@ -37,6 +37,7 @@ font-weight: 500;
 line-height: 1.5em;
 letter-spacing: -0.02em;
 background-color: #1c1d20;
+box-sizing: border-box;
 }
 
 input,

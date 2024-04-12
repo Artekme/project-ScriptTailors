@@ -1,8 +1,9 @@
 import axios from "axios";
 import Swiper from "swiper";
-import {Navigation} from 'swiper/modules';
-import 'swiper/swiper-bundle.css'
-Swiper.use([Navigation]);
+import {Navigation, Keyboard, Mousewheel} from 'swiper/modules';
+// import 'swiper/swiper-bundle.css'
+import 'swiper/css'
+Swiper.use([Navigation, Keyboard, Mousewheel]);
 
 
 let swiper;
@@ -31,6 +32,7 @@ function renderReview({author, avatar_url, review}) {
             alt = "review from ${author}"
             width = "48"
             height = "48"
+            loading = "lazy"
         />
         <h3 class="card-title">${author}</h3>
         <p class="reviews-paragraph">${review}</p>
@@ -57,13 +59,17 @@ function initSwiper() {
         direction: 'horizontal',
         loop: false,
         autoHeight: true,
+        // centeredSlides: true,
+        // centeredSlidesBounds: true,
+        // centerInsufficientSlides: true,
+        modules: [Navigation, Keyboard, Mousewheel],
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
         slidesPerView: 1,
-        spaceBetween: 30,
-        freeMode: true,
+        spaceBetween: 16,
+        // freeMode: true,
         keyboard: {
             enabled: true,
             onlyInViewport: false,
@@ -73,22 +79,26 @@ function initSwiper() {
             enabled: true,
             invert: true
         },
+        speed: 1200,
         simulateTouch: true,
+        updateOnWindowResize: true,
         breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 30
+                // slidesPerGroup: 1,
+                spaceBetween: 16,
+                // width: '704px'
             },
             1400: {
-                slidesPerView: 3,
-                spaceBetween: 30
+                slidesPerView: 4,
+                // slidesPerGroup: 1,
+                spaceBetween: 16,
+                // width: '1376px'
             }
-        }
-});
+        },
+        // breakpointsBase: 'container',
+        
+})
     updateNavigationButtons();
 
     swiper.on('slideChange', ()=> {
