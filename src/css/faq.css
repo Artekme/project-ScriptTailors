@@ -76,13 +76,19 @@
         display: flex;
         flex-wrap: wrap;
         /* row-gap: 64px; */
-        column-gap: 58px;
-        justify-content: space-between;
+        /* column-gap: 58px; */
+        /* justify-content: space-between; */
     }
 
     .list-item-faq{
-        width: calc((100%-64) / 2);
+        border: 1px solid rgba(250, 250, 250, 0.2);
+       
     } 
+
+    .div-faq{
+        display: flex;
+        
+    }
     
     .question-faq {
         padding-bottom: 21px;
