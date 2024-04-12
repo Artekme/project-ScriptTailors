@@ -12,8 +12,8 @@
     </a>
 
     <nav class="navigation">
-      <p class="title-navigation">Menu</p>
-      <ul class="list-navigation">
+      <a href="#" class="title-navigation">Menu</a>
+      <ul class="list-navigation hidden">
         <li class="item-navigation">
           <a href="#about-me" class="link-item-navigation">About me</a>
         </li>
@@ -27,13 +27,13 @@
           <a href="#faq" class="link-item-navigation">FAQ</a>
         </li>
       </ul>
-
-      <div class="order_project-navigation">
-        <a href="#work-together" class="link-order_project-navigation"
-          >Order the project</a
-        >
-      </div>
     </nav>
+
+    <div class="order_project-navigation">
+      <a href="#work-together" class="link-order_project-navigation"
+        >Order the project</a
+      >
+    </div>
 
     <button class="mobile-menu-open-btn" type="button">
       <svg
@@ -50,17 +50,17 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu-wrapper">
-  <div class="container mobile-menu-container">
-    <button class="mobile-menu-close-btn" type="button">
-      <svg
-        class="mobile-menu-close-btn-icon"
-        width="14"
-        height="14"
-        aria-label="mobile menu close icon"
-      >
-        <use href="./img/symbol-defs.svg#icon-close-cross"></use>
-      </svg>
-    </button>
+  <button class="mobile-menu-close-btn" type="button">
+    <svg
+      class="mobile-menu-close-btn-icon"
+      width="14"
+      height="14"
+      aria-label="mobile menu close icon"
+    >
+      <use href="./img/symbol-defs.svg#icon-close-cross"></use>
+    </svg>
+  </button>
+  <div class="mobile-menu-container">
     <nav class="navigation-mobile-menu">
       <ul class="list-navigation-mobile-menu">
         <li class="item-navigation-mobile-menu">
@@ -82,13 +82,11 @@
           <a href="#faq" class="link-item-navigation-mobile-menu">FAQ</a>
         </li>
       </ul>
-      <div class="order_project-navigation-mobile-menu">
-        <a
-          href="#work-together"
-          class="link-order_project-navigation-mobile-menu"
-          >Order the project</a
-        >
-      </div>
     </nav>
+    <div class="order_project-navigation-mobile-menu">
+      <a href="#work-together" class="link-order_project-navigation-mobile-menu"
+        >Order the project</a
+      >
+    </div>
   </div>
 </div>

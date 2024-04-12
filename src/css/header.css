@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -9,39 +13,30 @@
   display: flex;
   gap: 8px;
 }
-/* .logo-image-header {
-} */
+
 .logo-surname-header {
+  color: #fafafa;
   line-height: 1;
-  /*можливо треба буде прибрати після fetchu */
-  margin: 0;
 }
 .navigation {
   display: none;
 }
 
-/* .item-navigation {
-}
-.link-item-navigation {
-}
-.order_project-navigation {
-}
 .link-order_project-navigation {
-} */
-.mobile-menu-open-btn {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
-
-  stroke-width: 2px;
-  /* stroke: #fafafa; */
-  stroke: #d11515;
+  display: none;
 }
-/* .mobile-menu-open-btn-icon {
-} */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.99px) {
+  .mobile-menu-open-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+
+    stroke-width: 2px;
+    stroke: #fafafa;
+  }
+
   /*Mobile menu styles*/
   .mobile-menu-wrapper {
     position: fixed;
@@ -63,6 +58,11 @@
 
   .mobile-menu-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
   }
 
   .mobile-menu-close-btn {
@@ -76,15 +76,86 @@
     line-height: 0;
 
     stroke-width: 2px;
-    stroke: #2ec51a;
+    stroke: #fafafa;
+  }
+
+  .navigation-mobile-menu {
+    margin-top: auto;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3.1px;
+    color: #fafafa;
+  }
+
+  .title-navigation-mobile-menu {
+    padding: 10px;
+    width: 60px;
+    height: 39px;
+  }
+
+  .list-navigation-mobile-menu {
+    text-align: center;
+  }
+
+  .order_project-navigation-mobile-menu {
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
+
+  .link-order_project-navigation-mobile-menu {
+    display: block;
+    border-radius: 60px;
+    padding: 14px 31px;
+    width: 164px;
+    background: #ed3b44;
+    font-size: 14px;
+    height: 45px;
+    line-height: 1;
+    color: #fafafa;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .title-navigation {
-    display: ;
-  }
-  .list-navigation {
+  .mobile-menu-open-btn {
     display: none;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    color: #fafafa;
+  }
+
+  .title-navigation {
+    padding: 10px;
+    width: 60px;
+    height: 39px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3.1px;
+  }
+
+  .list-navigation {
+    width: 67px;
+    height: 91px;
+    text-align: center;
+  }
+
+  .link-order_project-navigation {
+    display: block;
+    border-radius: 60px;
+    padding: 18px 24px;
+    width: 163px;
+    height: 55px;
+    background: #ed3b44;
+    line-height: 1;
+    color: #fafafa;
   }
 }
