@@ -1,4 +1,4 @@
-.faq-title {
+/* .faq-title {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -104,9 +104,7 @@
     .faq-list{
         display: flex;
         flex-wrap: wrap;
-        /* row-gap: 64px; */
-        /* column-gap: 58px; */
-        /* justify-content: space-between; */
+
     }
 
     .faq-list-item{
@@ -126,4 +124,4 @@
     .faq-text {
         padding-bottom: 26px;
     }
-}
+} */
