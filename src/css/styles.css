@@ -7,16 +7,9 @@
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
-@import url('./about-me.css');
-@import url('./benefits.css');
-@import url('./projects.css');
-@import url('./faq.css');
-@import url('./covers.css');
-@import url('./reviews.css');
-@import url('./work-together.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -29,14 +22,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter Tight", sans-serif;
 font-size: 16px;
 font-weight: 500;
 line-height: 1.5em;
 letter-spacing: -0.02em;
 background-color: #1c1d20;
+box-sizing: border-box;
+
 }
 
 input,
@@ -70,7 +70,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 32px;
@@ -83,3 +83,4 @@ button {
     max-width: 1440px;
   }
 }
+
