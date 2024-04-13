@@ -14,13 +14,13 @@
 </symbol>
 <symbol id="icon-arrow-left" viewBox="0 0 32 32">
 <title>arrow-left</title>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M26.66 16h-21.33"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M13.33 24l-8-8 8-8"></path>
+<path fill="none"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M26.66 16h-21.33"></path>
+<path fill="none"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M13.33 24l-8-8 8-8"></path>
 </symbol>
 <symbol id="icon-arrow-right" viewBox="0 0 32 32">
 <title>arrow-right</title>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.33 16h21.33"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M18.66 8l8 8-8 8"></path>
+<path fill="none"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.33 16h21.33"></path>
+<path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M18.66 8l8 8-8 8"></path>
 </symbol>
 <symbol id="icon-close-cross" viewBox="0 0 32 32">
 <title>close-cross</title>
