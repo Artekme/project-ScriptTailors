@@ -26,10 +26,10 @@ function rotateIcon(e) {
       (btn.id === "acc-third-btn") {
       iconList[2].classList.toggle('clicked');
     }
-  } 
+  }
 }
 
-const swiperEl = document.querySelector('.swiper-container');
+const swiperEl = document.querySelector('.swiper');
 const buttonEl = document.querySelector('.swiper-button-next');
 
 const swiper = new Swiper(swiperEl, {
@@ -37,8 +37,8 @@ const swiper = new Swiper(swiperEl, {
   direction: 'horizontal',
   spaceBetween: 0,
   navigation: {
-    nextEl: '.swiper-button-next',
-    },
+    nextEl: buttonEl,
+  },
   slidesPerView: 2,
   initialSlide: 1,
   updateOnWindowResize: true,
