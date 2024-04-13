@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/project-ScriptTailors/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/project-ScriptTailors/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Script Tailors Project</title>
 
@@ -22,7 +22,9 @@
 
     
     <script type="module" crossorigin src="/project-ScriptTailors/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-ScriptTailors/assets/index-0c843ac6.css">
+    <link rel="modulepreload" crossorigin href="/project-ScriptTailors/assets/vendor-f9e3a663.js">
+    <link rel="stylesheet" href="/project-ScriptTailors/assets/vendor-ed6a6904.css">
+    <link rel="stylesheet" href="/project-ScriptTailors/assets/index-0e856089.css">
   </head>
 
   <body>
@@ -71,7 +73,7 @@
         height="28"
         aria-label="mobile menu open icon"
       >
-        <use href="/project-ScriptTailors/assets/symbol-defs-0d308046.svg#burger-icon"></use>
+        <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#burger-icon"></use>
       </svg>
     </button>
   </div>
@@ -86,7 +88,7 @@
       height="14"
       aria-label="mobile menu close icon"
     >
-      <use href="/project-ScriptTailors/assets/symbol-defs-0d308046.svg#icon-close-cross"></use>
+      <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-close-cross"></use>
     </svg>
   </button>
   <div class="mobile-menu-container">
@@ -120,15 +122,719 @@
   </div>
 </div>
 
-      
+      <section class="hero">
+  <h1 class="hero-title">
+    Hello. <br />
+    I’m Fullstack developer <br />
+    Lloyd Jefferson.
+  </h1>
+  <div class="container-hero">
+    <address class="hero-address">
+      <ul class="hero-address-list">
+        <li>
+          <div class="circle">
+            <a
+              href="https://www.instagram.com/goitclub/"
+              class="hero-address-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ig
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="circle">
+            <a
+              href="https://www.facebook.com/goITclub/"
+              class="hero-address-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >fb
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="circle">
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              class="hero-address-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >yt
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="circle">
+            <a
+              href="#"
+              class="hero-address-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >gh
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="circle-email">
+            <a
+              class="hero-address-mail-link"
+              href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com
+            </a>
+          </div>
+        </li>
+      </ul>
+    </address>
+  </div>
+</section>
+
     </div>
+    <section class="about-me" id="about-me">
+  <div class="wrapper-about-me">
+    <h2 class="title-about-me visually-hidden">About us</h2>
+
+    <div class="resume-container-about-me">
+      <div class="text-container-about-me">
+        <p class="resume-about-me">
+          I work with people all over the world to create impressive and
+          <span class="accent-red-about-me">functional</span>
+          <span class="accent-grey-about-me">websites</span> that reflect each
+          client's unique personality.
+        </p>
+      </div>
+      <div class="img-tumb-about-me">
+        <picture class="picture-about-me">
+          <source
+            srcset="/project-ScriptTailors/assets/hero-desktop@1x-76c6c385.png 1x, /project-ScriptTailors/assets/hero-desktop@2x-1bcb9055.png 2x"
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="/project-ScriptTailors/assets/hero-tablet@1x-65b0d11b.png 1x, /project-ScriptTailors/assets/hero-tablet@2x-0bd4a7d5.png 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="/project-ScriptTailors/assets/hero-mobile@1x-6cfd6d36.png 1x, /project-ScriptTailors/assets/hero-mobile@2x-5a58f94b.png 2x"
+            media="(max-width: 767px)"
+          />
+          <img src="/project-ScriptTailors/assets/hero-mobile@1x-6cfd6d36.png" alt="Jefferson image" />
+        </picture>
+      </div>
+    </div>
+
+    <!-- ===============accordeon================== -->
+
+    <ul class="accordion-container-about-me accordion-container">
+      <li class="accordion-item-about-me ac">
+        <h3 class="accordion-item-title-about-me ac-header">
+          About me
+          <button
+            class="accordion-button-about-me ac-trigger"
+            id="acc-first-btn"
+            type="button"
+            title="open close panel"
+          >
+            <svg
+              class="accordion-button-icon"
+              width="18"
+              height="18"
+              aria-label="accordion open close button icon"
+            >
+              <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="accordion-panel-about-me ac-panel">
+          <ul class="list-accordion-text-about-me first ac-text">
+            <li class="list-item-accordion-text-about-me">
+              <p>
+                I am Lloyd Jefferson, a talented programmer with extensive
+                expertise in software development. I have an understanding of
+                different programming languages and technologies, always ready
+                to improve my skills. I always follow the latest trends and look
+                for unconventional, creative solutions to problems. I have a
+                high level of analytical skills and am able to effectively solve
+                even the most difficult tasks encountered on the way.
+              </p>
+            </li>
+            <li class="list-item-accordion-text-about-me">
+              <p>
+                Able to work both independently and in a team. I can effectively
+                cooperate with colleagues, exchanging ideas and finding optimal
+                solutions. Professional maturity allows you to calmly cope with
+                challenges and stressful situations, while maintaining a high
+                quality of work. I am always looking for opportunities for
+                self-improvement. I actively study new technologies and
+                practices to stay abreast of the latest innovations. I have a
+                strong understanding of various programming languages,
+                frameworks and architectural concepts that allow me to create
+                efficient and scalable software.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="accordion-item-about-me ac">
+        <h3 class="accordion-item-title-about-me ac-header">
+          Role
+          <button
+            class="accordion-button-about-me ac-trigger"
+            id="acc-second-btn"
+            type="button"
+            title="open close panel"
+          >
+            <svg
+              class="accordion-button-icon"
+              width="18"
+              height="18"
+              aria-label="accordion open close button icon"
+            >
+              <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="accordion-panel-about-me ac-panel">
+          <ul class="list-accordion-text-about-me">
+            <li class="list-item-accordion-text-about-me">
+              <p>Frontend development</p>
+            </li>
+            <li class="list-item-accordion-text-about-me">
+              <p>HeadlessCMS,Wordpress</p>
+            </li>
+            <li class="list-item-accordion-text-about-me">
+              <p>Blender(enjoy)</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="accordion-item-about-me ac">
+        <h3 class="accordion-item-title-about-me ac-header">
+          Education
+          <button
+            class="accordion-button-about-me ac-trigger"
+            id="acc-third-btn"
+            type="button"
+            title="open close panel"
+          >
+            <svg
+              class="accordion-button-icon"
+              width="18"
+              height="18"
+              aria-label="accordion open close button icon"
+            >
+              <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="accordion-panel-about-me ac-panel">
+          <ul class="list-accordion-text-about-me">
+            <li class="list-item-accordion-text-about-me">
+              <p>
+                2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+                York
+              </p>
+            </li>
+            <li class="list-item-accordion-text-about-me">
+              <p>
+                2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+                School, New York
+              </p>
+            </li>
+            <li class="list-item-accordion-text-about-me">
+              <p>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <!-- ===========================swiper========================= -->
+    <div class="swiperc">
+      <div class="swiper">
+        <!-- Slides list -->
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide"><p>HTML/CSS</p></li>
+          <li class="swiper-slide"><p>JavaScript</p></li>
+          <li class="swiper-slide"><p>React</p></li>
+          <li class="swiper-slide"><p>Node.js</p></li>
+          <li class="swiper-slide"><p>React Native</p></li>
+          <li class="swiper-slide"><p>Sass</p></li>
+          <li class="swiper-slide"><p>Git</p></li>
+          <li class="swiper-slide"><p>Soft Skills</p></li>
+        </ul>
+      </div>
+      <button class="swiper-button-next" title="next-slide">
+        <svg class="right-arrow-icon-about-me" aria-label="icon to swipe right">
+          <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+    <section id="benefits" class="benefits-section section">
+  <div class="container">
+    <div class="benefits-wrapper">
+      <h2 class="benefits-title">BENEFITS OF WORKING WITH ME</h2>
+      <div class="benefits">
+        <ul class="benefits-item list">
+          <li class="benefits-item-descr">
+            <div class="benefits-item-icon">
+              <svg
+                class="benefits-icon"
+                width="24"
+                height="24"
+                aria-label="icon-user"
+              >
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-user"></use>
+              </svg>
+            </div>
+            <h3 class="feuter-title">Expertise</h3>
+            <p class="feuter-desc">
+              As a highly experienced developer, I have deep knowledge of
+              programming and website development.
+            </p>
+          </li>
+          <li class="benefits-item-descr">
+            <div class="benefits-item-icon">
+              <svg
+                class="benefits-icon"
+                width="24"
+                height="24"
+                aria-label="message-chat-circle"
+              >
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-message-chat"></use>
+              </svg>
+            </div>
+            <h3 class="feuter-title">Communication</h3>
+            <p class="feuter-desc">
+              Understanding your needs and wants is my priority and I am always
+              open to discussions and corrections.
+            </p>
+          </li>
+          <li class="benefits-item-descr">
+            <div class="benefits-item-icon">
+              <svg
+                class="benefits-icon"
+                width="24"
+                height="24"
+                aria-label="icon-brush"
+              >
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-brush"></use>
+              </svg>
+            </div>
+            <h3 class="feuter-title">Art</h3>
+            <p class="feuter-desc">
+              Thanks to my creative nature, I am ready to accept challenges and
+              help you bring your ideas to life.
+            </p>
+          </li>
+          <li class="benefits-item-descr">
+            <div class="benefits-item-icon">
+              <svg
+                class="benefits-icon"
+                width="24"
+                height="24"
+                aria-label="icon-hourglass"
+              >
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-hourglass"></use>
+              </svg>
+            </div>
+            <h3 class="feuter-title">Urgent execution</h3>
+            <p class="feuter-desc">
+              I understand how important time is to you. Ready to work quickly
+              and efficiently, without reducing the quality of work.
+            </p>
+          </li>
+        </ul>
+        <a class="order-link-btn" role="button" href="#work-together"
+          >Order the project</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="title-projects">Projects</h2>
+        <!-- Swiper -->
+        <div class="swiper">
+          <!-- Slides list -->
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="white-projects">
+                <ul class="tech-list-projects">
+                  <li class="tech-item-projects">&#35;react</li>
+                  <li class="tech-item-projects">&#35;js</li>
+                  <li class="tech-item-projects">&#35;node js</li>
+                  <li class="tech-item-projects">&#35;git</li>
+                </ul>
+                <h3 class="swiper-title-projects">
+                  Programming Across Borders: Ideas, Technologies, Innovations
+                </h3>
+                <a
+                  class="link-projects"
+                  href="https://github.com/Artekme/project-ScriptTailors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >See project</a
+                >
+              </div>
+              <div class="black-projects">
+                <div class="img-thumb-projects">
+                <picture>
+                  <!-- Десктопна версія -->
+                  <source srcset="/project-ScriptTailors/assets/project1-tab@1x-b7f86f09.webp 1x, /project-ScriptTailors/assets/project1-tab@2x-6ff36f9d.webp 2x"
+                          media="(min-width: 768px)">
+                  <!-- Мобільна версія -->
+
+                    <source srcset="/project-ScriptTailors/assets/project1-mob@1x-544cfbe5.webp 1x, /project-ScriptTailors/assets/project1-mob@2x-ef09aed1.webp 2x">
+                
+                  <img src="/project-ScriptTailors/assets/project1-tab@2x-6ff36f9d.webp" alt="Green.Harvest web-site" loading="lazy">
+                </picture>
+              </div>
+            </div>
+            </li>
+            <li class="swiper-slide">
+                <div class="white-projects">
+                  <ul class="tech-list-projects">
+                    <li class="tech-item-projects">&#35;react</li>
+                    <li class="tech-item-projects">&#35;js</li>
+                    <li class="tech-item-projects">&#35;node js</li>
+                    <li class="tech-item-projects">&#35;git</li>
+                  </ul>
+                  <h3 class="swiper-title-projects">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="link-projects"
+                    href="https://github.com/Artekme/project-ScriptTailors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >See project</a
+                  >
+                </div>
+                <div class="black-projects">
+                  <div class="img-thumb-projects">
+                    <picture>
+                        <!-- Десктопна версія -->
+                        <source srcset="/project-ScriptTailors/assets/project2-tab@1x-9b9c853e.webp 1x, /project-ScriptTailors/assets/project2-tab@2x-20915d37.webp 2x"
+                                media="(min-width: 768px)">
+                        <!-- Мобільна версія -->
+      
+                          <source srcset="/project-ScriptTailors/assets/project2-mob@1x-252d1374.webp 1x, /project-ScriptTailors/assets/project2-mob@2x-373f2ae8.webp 2x">
+                      
+                        <img src="/project-ScriptTailors/assets/project1-tab@2x-6ff36f9d.webp" alt="Green.Harvest web-site" loading="lazy">
+                      </picture>
+                </div>
+              </div>
+              </li>
+            </li>
+            <li class="swiper-slide">
+                <div class="white-projects">
+                  <ul class="tech-list-projects">
+                    <li class="tech-item-projects">&#35;react</li>
+                    <li class="tech-item-projects">&#35;js</li>
+                    <li class="tech-item-projects">&#35;node js</li>
+                    <li class="tech-item-projects">&#35;git</li>
+                  </ul>
+                  <h3 class="swiper-title-projects">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="link-projects"
+                    href="https://github.com/Artekme/project-ScriptTailors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >See project</a
+                  >
+                </div>
+                <div class="black-projects">
+                  <div class="img-thumb-projects">
+                    <picture>
+                        <!-- Десктопна версія -->
+                        <source srcset="/project-ScriptTailors/assets/project3-tab@1x-a2c94fc1.webp 1x, /project-ScriptTailors/assets/project3-tab@2x-cd0760bd.webp 2x"
+                                media="(min-width: 768px)">
+                        <!-- Мобільна версія -->
+      
+                          <source srcset="/project-ScriptTailors/assets/project3-mob@1x-fdaccf17.webp 1x, /project-ScriptTailors/assets/project3-mob@2x-3440a726.webp 2x">
+                      
+                        <img src="/project-ScriptTailors/assets/project1-tab@2x-6ff36f9d.webp" alt="Green.Harvest web-site" loading="lazy">
+                      </picture>
+                </div>
+              </div>
+              </li>
+          </ul>
+          <!-- Buttons -->
+          <div class="buttons-wrapper-projects">
+            <button class="swiper-button-prev">
+              <svg class="left-arrow-icon-projects" width="32px" height="32px" aria-label="icon to swipe left">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="swiper-button-next">
+              <svg class="right-arrow-icon-projects" width="32px" height="32px" aria-label="icon to swipe right">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+  <div class="container">
+    <h2 class="faq-title">FAQ</h2>
+    <ul class="faq-list accordion-container">
+      <li class="faq-list-item faq-item-first ac">
+        <h3 class="faq-question ac-header">
+          <button class="faq-button ac-trigger" type="button">
+            What programming languages are most often used in your project?
+            <span class="faq-icon">
+              <svg class="icon-arrow-down" aria-label="open icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon-arrow-up" aria-label="close icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="faq-item-content ac-panel">
+          <p class="faq-text ac-text">
+            In the field of web development, there are various technologies and
+            programming languages.Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item faq-item-second ac">
+        <h3 class="faq-question ac-header">
+          <button class="faq-button ac-trigger" type="button">
+            What are the deadlines for the project?
+            <span class="faq-icon">
+              <svg class="icon-arrow-down" aria-label="open icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon-arrow-up" aria-label="close icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="faq-item-content ac-panel">
+          <p class="faq-text ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item faq-item-third ac">
+        <h3 class="faq-question ac-header">
+          <button class="faq-button ac-trigger" type="button">
+            What payment methods do you accept?
+            <span class="faq-icon">
+              <svg class="icon-arrow-down" aria-label="open icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon-arrow-up" aria-label="close icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="faq-item-content ac-panel">
+          <p class="faq-text ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item faq-item-fourth ac">
+        <h3 class="faq-question ac-header">
+          <button class="faq-button ac-trigger" type="button">
+            How can I contact you?
+            <span class="faq-icon">
+              <svg class="icon-arrow-down" aria-label="open icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon-arrow-up" aria-label="close icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="faq-item-content ac-panel">
+          <p class="faq-text ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item faq-item-fifth ac">
+        <h3 class="faq-question ac-header">
+          <button class="faq-button ac-trigger" type="button">
+            Do you provide advice or support?
+            <span class="faq-icon">
+              <svg class="icon-arrow-down" aria-label="open icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon-arrow-up" aria-label="close icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="faq-item-content ac-panel">
+          <p class="faq-text ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item faq-item-sixth ac">
+        <h3 class="faq-question ac-header">
+          <button class="faq-button ac-trigger" type="button">
+            What does the process of developing a software product look like
+            from idea to implementation?
+            <span class="faq-icon">
+              <svg class="icon-arrow-down" aria-label="open icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon-arrow-up" aria-label="close icon">
+                <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="faq-item-content ac-panel">
+          <p class="faq-text ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
     
-    
-    
-    
-    
-    
-    
+    <section class="reviews">
+    <div class="container">
+        <h2 class="reviews-title">Reviews</h2>
+        <div class="swiper-container">
+
+            <ul class="review-list swiper-wrapper">
+                
+            </ul>
+            <div class="swiper-navigation">
+                <button type="button" class="swiper-button-prev">
+                    <svg class="swiper-icon" width="32" height="32">
+                        <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="swiper-button-next">
+                    <svg class="swiper-icon" width="32" height="32">
+                        <use href="/project-ScriptTailors/assets/symbol-defs-70fa1684.svg#icon-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+                
+        </div>
+            
+        
+    </div>
+</section>
+    <footer id="work-together">
+  <div class="container footer-container">
+    <div class="footer-title-box">
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="
+            ./img/work-together/footerPhotoDesktop.png    1x,
+            ./img/work-together/footerPhotoDesktop@2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(max-width:767px)"
+          srcset="
+            ./img/work-together/footerPhoto.png    1x,
+            ./img/work-together/footerPhoto@2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          class=" "
+          src="./img/work-together/footerPhoto.png"
+          alt="photo by Jefferson"
+          loading="lazy"
+        />
+      </picture>
+      <h2 class="footer-title">Let’s <span class="accent-color">work</span></h2>
+      <h2 class="footer-title">together</h2>
+    </div>
+    <form class="footer-form">
+      <input
+        class="form-item"
+        type="email"
+        name="email"
+        placeholder="clients@gmail.com"
+        pattern="(^[^\s@]+@[^\s@]+\.[^\s@]+$)"
+        autocomplete="off"
+        required
+      />
+      <input
+        class="form-item"
+        type="text"
+        name="comments"
+        placeholder="comments"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="btn-submit">Send</button>
+    </form>
+    <ul>
+      <li class="footer-link">
+        <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+      </li>
+      <li class="footer-link">
+        <a href="tel:+3801111111111">+380 11 1111 11 11</a>
+      </li>
+    </ul>
+  </div>
+  <!-- MODAL -->
+  <div class="modal-background">
+    <div class="modal container">
+      <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+      <p class="modal-text">
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+      <svg class="modal-close" width="22" height="22">
+        <use href="./img/symbol-defts.svg#icon-close-cross"></use>
+      </svg>
+    </div>
+  </div>
+</footer>
+
 
     
   </body>
