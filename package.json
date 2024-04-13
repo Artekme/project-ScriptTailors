@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/scriptTailors/",
+    "build": "vite build --base=/project-ScriptTailors/",
     "preview": "vite preview"
   },
   "devDependencies": {
