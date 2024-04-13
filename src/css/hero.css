@@ -1,13 +1,7 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      -90deg,
-      rgba(28, 29, 32, 1),
-      rgb(105, 41, 45, 1),
-      rgba(237, 59, 68, 1)
-    ),
-    url(#);
+  background-image: url(../img/hero/Hero-mobile.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -17,13 +11,7 @@
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .hero {
-    background-image: linear-gradient(
-        -90deg,
-        rgba(28, 29, 32, 1),
-        rgb(105, 41, 45, 1),
-        rgba(237, 59, 68, 1)
-      ),
-      url(#);
+    background-image: url(../img/hero/Hero-mobile@2x.png);
   }
 }
 
@@ -67,6 +55,8 @@
   height: 37px; /* Висота кола */
   border-radius: 50%; /* Радіус кордону, щоб зробити його круглим */
   border: 1px solid rgba(250, 250, 250, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-address-mail-link {
@@ -85,10 +75,20 @@
   height: 37px; /* Висота кола */
   border-radius: 60px; /* Радіус кордону, щоб зробити його круглим */
   border: 1px solid rgba(250, 250, 250, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover {
   cursor: pointer;
+}
+.circle {
+  /* Інші стилі для кнопки */
+  transition: transform 0.8s; /* Додайте плавний перехід */
+}
+
+.circle:hover {
+  transform: rotate(360deg);
 }
 
 .circle-email:hover {
@@ -110,18 +110,8 @@ a:hover {
 /* TABLET */
 
 @media screen and (min-width: 768px) {
-  @media screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 192dpi),
-    screen and (min-device-pixel-ratio: 2) {
-    .hero {
-      background-image: linear-gradient(
-          -90deg,
-          rgba(28, 29, 32, 1),
-          rgb(105, 41, 45, 1),
-          rgba(237, 59, 68, 1)
-        ),
-        url(#);
-    }
+  .hero {
+    background-image: url(../img/hero/Hero-tablet.png);
   }
 
   .hero-title {
@@ -153,22 +143,29 @@ a:hover {
     width: 223px; /* Ширина кола */
     height: 55px; /* Висота кола */
   }
-}
 
-/* DESCTOP */
-@media screen and (min-width: 1280px) {
+  .circle {
+    /* Інші стилі для кнопки */
+    transition: transform 0.8s; /* Додайте плавний перехід */
+  }
+
+  .circle:hover {
+    transform: rotate(360deg);
+  }
+
   @media screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx),
+    screen and (min-resolution: 192dpi),
     screen and (min-device-pixel-ratio: 2) {
     .hero {
-      background-image: linear-gradient(
-          -90deg,
-          rgba(28, 29, 32, 1),
-          rgb(105, 41, 45, 1),
-          rgba(237, 59, 68, 1)
-        ),
-        url(#);
+      background-image: url(../img/hero/Hero-tablet@2x.png);
     }
+  }
+}
+
+/* DESkTOP */
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-image: url(../img/hero/hero_bg.jpeg);
   }
 
   .hero-title {
@@ -190,8 +187,16 @@ a:hover {
   }
 
   .circle {
-    width: 55px; 
-    height: 55px; 
+    width: 55px;
+    height: 55px;
+  }
+  .circle {
+    /* Інші стилі для кнопки */
+    transition: transform 0.8s; /* Додайте плавний перехід */
+  }
+
+  .circle:hover {
+    transform: rotate(360deg);
   }
 
   .hero-address-mail-link {
@@ -201,5 +206,12 @@ a:hover {
   .circle-email {
     width: 223px; /* Ширина кола */
     height: 55px; /* Висота кола */
+  }
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .hero {
+      background-image: url(../img/hero/hero_bg@2x.jpeg);
+    }
   }
 }
