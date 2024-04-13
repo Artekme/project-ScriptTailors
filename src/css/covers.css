@@ -43,7 +43,7 @@ ul {
     grid-column: span 4/-3;
   }
   
-  .marquee__inner {
+  .marquee-inner.show {
 
     white-space: nowrap;
     animation-name: marqueeLine;
@@ -85,4 +85,10 @@ ul {
   }   
   
   
+    }
+
+    .list {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
     }

@@ -1,10 +1,12 @@
-const boxes = document.querySelector('.list-covers');
-window.addEventListener('scroll', checBoxes);
+const boxes = document.querySelectorAll('.marquee-inner');
+
+
+
 const checBoxes = () => {
-    const triger = window.innerHeight/2;
+    const trigger = window.innerHeight/2;
     for ( const box of boxes) {
         const topOfBox = box.getBoundingClientRect().top;
-        if (topOfBox < triger) {
+        if (topOfBox < trigger) {
             box.classList.add('show');
         } else { 
             box.classList.remove('show');
@@ -13,3 +15,4 @@ const checBoxes = () => {
 };
 
 checBoxes();
+window.addEventListener('scroll', checBoxes);
