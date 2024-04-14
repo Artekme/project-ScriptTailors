@@ -4,14 +4,37 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  margin-bottom: 64px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .background-wrapper {
+  position: relative; /* Для позиціонування псевдоелемента */
+}
+
+.background-wrapper::after {
+  filter: contrast(400%);
+  z-index: 1;
+  /* Додаємо прозоре зображення */
+  content: '';
+  background-image: url('../img/hero/glass-effect1-mob@1x.png');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute; /* Абсолютне позиціонування */
+}
+
+.background-gradient-top {
   background-image: linear-gradient(
     -90deg,
     rgba(28, 29, 32, 1),
-    rgba(105, 41, 45, 1),
-    rgba(237, 59, 68, 1)
+    rgba(28, 29, 32, 1),
+    rgba(255, 255, 255, 0)
   );
 }
 
@@ -19,12 +42,7 @@
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .background-wrapper {
-    background-image: linear-gradient(
-      -90deg,
-      rgba(28, 29, 32, 1),
-      rgba(105, 41, 45, 1),
-      rgba(237, 59, 68, 1)
-    );
+    background-image: url('../img/hero/glass-effect1-mob@2x.png');
   }
 }
 
@@ -107,13 +125,17 @@ a:hover {
 /* TABLET */
 
 @media screen and (min-width: 768px) {
-  .background-wrappe {
-    background-image: linear-gradient(
-      -90deg,
-      rgba(28, 29, 32, 1),
-      rgba(105, 41, 45, 1),
-      rgba(237, 59, 68, 1)
-    );
+  .background-wrapper::after {
+    z-index: 1;
+    /* Додаємо прозоре зображення */
+    content: '';
+    background-image: url('../img/hero/glass-effect1-tab@1x.png');
+    opacity: 100; /* Встановлюємо прозорість зображення */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; /* Абсолютне позиціонування */
   }
 
   .hero-title {
@@ -128,7 +150,6 @@ a:hover {
   .hero-address-list {
     gap: 10px;
     justify-content: flex-end;
-    padding-right: 32px;
   }
 
   .hero-address-link {
@@ -153,12 +174,7 @@ a:hover {
     screen and (min-resolution: 192dpi),
     screen and (min-device-pixel-ratio: 2) {
     .background-wrapper {
-      background-image: linear-gradient(
-        -90deg,
-        rgba(28, 29, 32, 1),
-        rgba(105, 41, 45, 1),
-        rgba(237, 59, 68, 1)
-      );
+      background-image: url('../img/hero/glass-effect1-tab@2x.png');
     }
   }
 }
@@ -166,13 +182,21 @@ a:hover {
 /* DESKTOP */
 
 @media screen and (min-width: 1280px) {
-  .background-wrapper {
-    background-image: linear-gradient(
-      -90deg,
-      rgba(28, 29, 32, 1),
-      rgba(105, 41, 45, 1),
-      rgba(237, 59, 68, 1)
-    );
+  .background-wrapper::after {
+    z-index: 1;
+    /* Додаємо прозоре зображення */
+    content: '';
+    background-image: url('../img/hero/glass-effect1@1x.png');
+    opacity: 100; /* Встановлюємо прозорість зображення */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; /* Абсолютне позиціонування */
+  }
+
+  .hero {
+    margin-bottom: 96px;
   }
 
   .hero-title {
@@ -189,19 +213,13 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 32px;
   }
 
   @media screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx),
     screen and (min-device-pixel-ratio: 2) {
     .background-wrapper {
-      background-image: linear-gradient(
-        rgba(28, 29, 32, 1),
-        rgba(105, 41, 45, 1),
-        rgba(237, 59, 68, 1)
-      );
+      background-image: url('../img/hero/glass-effect1@2x.png');
     }
   }
 }
-
