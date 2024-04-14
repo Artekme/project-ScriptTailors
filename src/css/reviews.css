@@ -11,23 +11,14 @@
     text-transform: uppercase;
     }
 
-    .review-list {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline-start: 0; */
-    /* background-color: #1c1d20; */
-}
-
 .review-card {
 display: flex;
 align-items: center;
 justify-content: flex-start;
-flex-direction: row;
+flex-direction: column;
 border: 1px solid rgba(250, 250, 250, 0.2);
 border-radius: 20px;
 padding: 32px 24px;
-/* margin-bottom: 32px; */
 max-width: 343px;
 max-height: 310px;
 background-color: #1c1d20;
@@ -57,14 +48,19 @@ text-align: left;
     height: 120px;
 }
 
-.swiper-wrapper-reviews {
-    overflow: hidden; /* Ensures nothing spills outside the swiper area */
+.reviews .swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews .swiper-container .swiper-wrapper{
+    overflow: visible; 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%; 
 }
 
-.swiper-navigation{
+.reviews .swiper-container .swiper-navigation{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,13 +70,14 @@ text-align: left;
 
 }
 
-.swiper-button-disabled {
+.reviews .swiper-container .swiper-button-disabled {
     opacity: 0.3;
     cursor: default;
     pointer-events: none;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.reviews .swiper-container .swiper-button-prev, 
+.reviews .swiper-container .swiper-button-next {
     background-color: #1c1d20;
     border-radius: 60%;
     width: 52px;
@@ -116,16 +113,6 @@ li.not-found-item {
     letter-spacing: -0.32px;
 }
 
-/* .swiper-button-prev::after {
-    color: #FAFAFA;
-    content: '⟵';
-}
-
-.swiper-button-next::after {
-    content: '⟶'; 
-    color: #FAFAFA;
-} */
-
 /* ----TABLET---- */
 @media screen and (min-width: 768px) {
     .reviews{
@@ -133,7 +120,8 @@ li.not-found-item {
         padding-bottom: 96px;
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .reviews .swiper-container .swiper-button-next, 
+    .reviews .swiper-container .swiper-button-prev {
         padding: 18px;
         width: 68px;
         height: 68px;
