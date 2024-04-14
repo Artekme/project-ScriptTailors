@@ -15,16 +15,13 @@ const mobileMenuItems = document.querySelectorAll(
 );
 const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 const burgerMenuOpenBtn = document.querySelector('.mobile-menu-open-btn');
-console.log('burgerMenuOpenBtn' + burgerMenuOpenBtn);
 const burgerMenuCloseBtn = document.querySelector('.mobile-menu-close-btn');
-console.log('burgerMenuCloseBtn' + burgerMenuCloseBtn);
 const orderProjectLinkMobile = document.querySelector(
   '.link-order_project-navigation-mobile-menu'
 );
 const workTogetherSection = document.querySelector(
   '.link-order_project-navigation-mobile-menu'
 );
-console.log('workTogetherSection - ' + workTogetherSection);
 
 burgerMenuOpenBtn.addEventListener('click', openMobileMenu);
 burgerMenuCloseBtn.addEventListener('click', closeMobileMenu);

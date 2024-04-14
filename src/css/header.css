@@ -14,13 +14,21 @@ html {
   display: none;
 } */
 
+.header {
+  width: 100%;
+  position: absolute; /* Або fixed, якщо header має бути фіксованим */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Забезпечуємо, що header буде над hero */
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   padding-top: 32px;
 }
+
 .logo-link-header {
   display: flex;
   gap: 8px;
