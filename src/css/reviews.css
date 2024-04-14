@@ -57,7 +57,7 @@ text-align: left;
     height: 120px;
 }
 
-.swiper-container {
+.swiper-wrapper-reviews {
     overflow: hidden; /* Ensures nothing spills outside the swiper area */
     display: flex;
     flex-direction: column;
