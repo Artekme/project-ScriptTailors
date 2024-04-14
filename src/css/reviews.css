@@ -56,7 +56,7 @@ text-align: left;
 
 .reviews .swiper-container .swiper-wrapper{
     overflow: visible; 
-
+}
 .swiper-container {
     overflow: hidden; /* Ensures nothing spills outside the swiper area */
 
