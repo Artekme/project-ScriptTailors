@@ -217,6 +217,13 @@ body.modal-open {
   top: 25px;
   right: 25px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  stroke-width: 2px;
+  stroke: #fafafa;
 }
 
 /*----- MODAL -----*/
@@ -331,16 +338,8 @@ body.modal-open {
     top: 100px;
     left: 70px;
   }
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #494848;
-  border-radius: 10px;
+  .modal-close {
+    width: 24px;
+    height: 24px;
+  }
 }
