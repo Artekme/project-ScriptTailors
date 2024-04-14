@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  margin-bottom: 96px;
+  margin-bottom: 64px;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -195,6 +195,10 @@ a:hover {
     right: 0;
     bottom: 0;
     position: absolute; /* Абсолютне позиціонування */
+  }
+
+  .hero {
+    margin-bottom: 96px;
   }
 
   .hero-title {

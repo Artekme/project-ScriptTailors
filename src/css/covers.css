@@ -1,0 +1,90 @@
+/***************************COMMON STYLES************************/
+
+ul {
+    list-style-type: none;
+  }
+  .title-covers{
+    display: none;
+  }
+  
+  #covers {
+    background-color: #1C1D20;
+    background-image: radial-gradient(circle at 40% 20%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%),
+        radial-gradient(circle at 10% 50%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%),
+        radial-gradient(circle at 80% 80%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%);
+    padding: 0px;
+    overflow: hidden;
+    height: 508px;
+  }
+  
+  .content-covers {
+    padding-left: 0px;
+    padding-right: 0px;
+    transform: rotate(16deg);
+  }
+  
+  .list-covers {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(24, max-content);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  
+  .list-covers>li {
+    grid-column: span 1; 
+  }
+  
+  .list-covers>li:nth-child(-3n+1) {
+    grid-column: 3/span 4;
+  }
+  
+  .list-covers>li:nth-child(3n+2) {
+    grid-column: span 4/-3;
+  }
+  
+  .marquee-inner.show {
+
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(-20%);
+    }
+    
+    to {
+      transform: translateX(-180%);
+    }
+  }
+  
+  
+  /******************************** MOBILE *************************/
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+  
+  
+    }
+  
+  /******************************** TABLET *************************/
+  @media screen and (min-width: 768px)  {
+    #covers {
+      height: 960px;
+      margin: 0;
+  }
+      
+    }
+  
+  /******************************** DESKTOP *************************/
+  @media screen and (min-width: 1440px) {
+    #covers {
+        margin: 0;
+  }   
+  
+  
+    }
+
+    
