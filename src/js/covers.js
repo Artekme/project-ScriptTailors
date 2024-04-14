@@ -1,7 +1,5 @@
 const boxes = document.querySelectorAll('.marquee-inner');
 
-
-
 const checBoxes = () => {
    const trigger = window.innerHeight/2;
     for ( const box of boxes) {
