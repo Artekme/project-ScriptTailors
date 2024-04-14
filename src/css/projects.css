@@ -1,21 +1,3 @@
-@media screen and (max-width: 767.9px) {
-  .projects {
-    padding-bottom: 64px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1439.9px) {
-  .projects {
-    padding-bottom: 96px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .projects {
-    padding-bottom: 164px;
-  }
-}
-
 .title-projects {
   font-size: 16px;
   color: rgba(250, 250, 250, 0.4);
@@ -206,28 +188,29 @@
   }
 }
 
-.projects .swiper-button-disabled{
+.swiper-button-disabled{
   opacity: 0.4;
+  pointer-events: none;
 }
 
-.projects .swiper-button-prev,
-.projects .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   border: 1px solid rgb(59, 59, 59);
   border-radius: 50%;
   background-color: transparent;
   transition: border-color 200ms ease-in-out;
 }
 
-.projects .swiper-button-prev:hover,
-.projects .swiper-button-prev:focus,
-.projects .swiper-button-next:hover,
-.projects .swiper-button-next:focus {
+.swiper-button-prev:hover,
+.swiper-button-prev:focus,
+.swiper-button-next:hover,
+.swiper-button-next:focus {
   border: 1px solid rgba(250, 250, 250, 0.5);
 }
 
 @media screen and (max-width: 767.9px) {
-  .projects .swiper-button-prev,
-  .projects .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     padding: 14px;
     width: 52px;
     height: 52px;
@@ -235,8 +218,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .projects .swiper-button-prev,
-  .projects .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     padding: 18px;
     width: 68px;
     height: 68px;
@@ -246,15 +229,14 @@
 .left-arrow-icon-projects,
 .right-arrow-icon-projects {
   stroke: rgb(59, 59, 59);
-  transition: all 200ms ease-in-out;
+  transition: stroke 200ms ease-in-out;
 }
 
-.projects .swiper-button-prev:hover .left-arrow-icon-projects ,
-.projects .swiper-button-prev:focus .left-arrow-icon-projects,
-.projects .swiper-button-next:hover .right-arrow-icon-projects,
-.projects .swiper-button-next:focus .right-arrow-icon-projects {
+.swiper-button-prev:hover .left-arrow-icon-projects ,
+.swiper-button-prev:focus .left-arrow-icon-projects,
+.swiper-button-next:hover .right-arrow-icon-projects,
+.swiper-button-next:focus .right-arrow-icon-projects {
   stroke: rgba(250, 250, 250);
-  transform: scale(1.2);
 }
 
 @media screen and (max-width: 767.9px) {
