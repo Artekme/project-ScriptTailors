@@ -5,10 +5,11 @@ import Accordion from 'accordion-js';
 
 
 const iconListByAccordion = document.querySelectorAll('.accordion-button-icon-about-me');
-const myAccordion = document.querySelector('.accordion-container');
+const myAccordion = document.querySelector('.accordion-container-about-me');
 
 const accordionBySection = new Accordion(myAccordion, {
   showMultiple: true,
+  duration: 250
 });
 accordionBySection.open(0);
 
