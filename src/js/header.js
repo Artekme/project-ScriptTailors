@@ -1,5 +1,6 @@
 const titleNavigation = document.querySelector('.title-navigation');
 const listNavigation = document.querySelector('.list-navigation');
+const linkItemNavigation = document.querySelectorAll('.link-item-navigation');
 
 titleNavigation.addEventListener('click', titleNavigationHendler);
 
@@ -8,6 +9,12 @@ function titleNavigationHendler(event) {
 
   listNavigation.classList.toggle('show-menu');
 }
+
+linkItemNavigation.forEach(function (item) {
+  item.addEventListener('click', function () {
+    listNavigation.classList.toggle('show-menu');
+  });
+});
 
 /*Section hendler mobile menu*/
 const mobileMenuItems = document.querySelectorAll(
