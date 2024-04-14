@@ -150,7 +150,6 @@ a:hover {
   .hero-address-list {
     gap: 10px;
     justify-content: flex-end;
-    padding-right: 32px;
   }
 
   .hero-address-link {
@@ -214,7 +213,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 32px;
   }
 
   @media screen and (min-resolution: 192dpi),

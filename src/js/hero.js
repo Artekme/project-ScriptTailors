@@ -1,5 +1,5 @@
 // Масив кольорів для градієнта
-const colors = ['#ED3B44', '#C6E327', '#0041E8', '#E6533C', '#2B4441', '#FF7F08'];
+const colors = ['#ED3B44', '#C6E327', '#0041E8'];
 
 // Функція для перевірки, чи колір не занадто світлий
 function isColorTooLight(hex) {
@@ -128,3 +128,6 @@ function HSLToHex(h, s, l) {
 
 // Застосовуємо функцію до кожного кольору в масиві
 const enhancedColors = colors.map(color => enhanceColorContrastAndSaturation(color));
+
+
+// Анімація заголовку
