@@ -1,0 +1,169 @@
+.hidden {
+  display: none;
+}
+
+.header {
+  width: 100%;
+  position: absolute; /* Або fixed, якщо header має бути фіксованим */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Забезпечуємо, що header буде над hero */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 32px;
+}
+
+.logo-link-header {
+  display: flex;
+  gap: 8px;
+}
+
+.logo-surname-header {
+  color: #fafafa;
+  line-height: 1;
+}
+.navigation {
+  display: none;
+}
+
+.link-order_project-navigation {
+  display: none;
+}
+
+@media screen and (max-width: 767.99px) {
+  .mobile-menu-open-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+
+    stroke-width: 2px;
+    stroke: #fafafa;
+  }
+
+  /*Mobile menu styles*/
+  .mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+      270deg,
+      rgb(28, 29, 32) 49.692%,
+      rgb(105, 41, 45) 67.704%,
+      rgb(237, 59, 68) 99.891%
+    );
+
+    transform: translateX(100%);
+  }
+
+  .mobile-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+
+    stroke-width: 2px;
+    stroke: #fafafa;
+  }
+
+  .navigation-mobile-menu {
+    margin-top: auto;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3.1px;
+    color: #fafafa;
+  }
+
+  .title-navigation-mobile-menu {
+    padding: 10px;
+    width: 60px;
+    height: 39px;
+  }
+
+  .list-navigation-mobile-menu {
+    text-align: center;
+  }
+
+  .order_project-navigation-mobile-menu {
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
+
+  .link-order_project-navigation-mobile-menu {
+    display: block;
+    border-radius: 60px;
+    padding: 14px 31px;
+    width: 164px;
+    background: #ed3b44;
+    font-size: 14px;
+    height: 45px;
+    line-height: 1;
+    color: #fafafa;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-open-btn {
+    display: none;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    color: #fafafa;
+  }
+
+  .title-navigation {
+    padding: 10px;
+    width: 60px;
+    height: 39px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3.1px;
+  }
+
+  .list-navigation {
+    width: 67px;
+    height: 91px;
+    text-align: center;
+  }
+
+  .link-order_project-navigation {
+    display: block;
+    border-radius: 60px;
+    padding: 18px 24px;
+    width: 163px;
+    height: 55px;
+    background: #ed3b44;
+    line-height: 1;
+    color: #fafafa;
+  }
+}

@@ -29,6 +29,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 body {
   font-family: "Inter Tight", sans-serif;
@@ -37,7 +41,6 @@ font-weight: 500;
 line-height: 1.5em;
 letter-spacing: -0.02em;
 background-color: #1c1d20;
-box-sizing: border-box;
 }
 
 input,
