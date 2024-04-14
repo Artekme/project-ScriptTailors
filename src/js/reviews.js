@@ -58,7 +58,7 @@ function renderReview({author, avatar_url, review}) {
 async function renderReviews() {
     const reviewsData = await fetchReviews();
     const reviewsHTML = reviewsData.map(renderReview).join("");
-    const swiperWrapper = document.querySelector('.swiper-wrapper')
+    const swiperWrapper = document.querySelector('.reviews .swiper-wrapper')
 
     if(swiperWrapper){
         swiperWrapper.innerHTML = reviewsHTML;
