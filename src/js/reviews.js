@@ -71,14 +71,14 @@ async function renderReviews() {
 }
 
 function initSwiper() {
-    swiper = new Swiper('.swiper-container', {
+    swiper = new Swiper('.reviews .swiper-container', {
         modules: [Navigation, Keyboard, Mousewheel],
         direction: 'horizontal',
         loop: false,
         autoHeight: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.reviews .swiper-button-next',
+            prevEl: '.reviews .swiper-button-prev'
         },
         slidesPerView: 1,
         slidesPerGroup: 1,
@@ -115,18 +115,10 @@ function initSwiper() {
 }
 
 function updateNavigationButtons(){
-    let prevButton = document.querySelector('.swiper-button-prev');
-    let nextButton = document.querySelector('.swiper-button-next');
-    if (swiper.isBeginning) {
-        prevButton.classList.add('swiper-button-disabled');
-    } else {
-        prevButton.classList.remove('swiper-button-disabled');
-    }
-    if (swiper.isEnd) {
-        nextButton.classList.add('swiper-button-disabled');
-    } else {
-        nextButton.classList.remove('swiper-button-disabled');
-    }
+    let prevButton = document.querySelector('.reviews .swiper-button-prev');
+    let nextButton = document.querySelector('.reviews .swiper-button-next');
+    prevButton.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+    nextButton.classList.toggle('swiper-button-disabled', swiper.isEnd);
 }
 
 
