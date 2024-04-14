@@ -83,13 +83,11 @@
         align-items: center;
         background-color: transparent;
         line-height: 0;
-        fill: none;
-        stroke: rgba(250, 250, 250, 1);
     }
 
     .accordion-button-icon-about-me {
         overflow: visible;
-        fill: none;
+        fill: rgba(250, 250, 250, 1);
         stroke: rgba(250, 250, 250, 1);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -183,8 +181,9 @@
     }
 
     .swiper-button-next-about-me>.right-arrow-icon-about-me {
+        fill: rgba(250, 250, 250, 0.2);
         stroke: rgba(250, 250, 250, 0.2);
-        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
@@ -256,6 +255,7 @@
     }
 
     .swiper-button-next-about-me>.right-arrow-icon-about-me:active {
+        fill: rgba(250, 250, 250);
         stroke: rgba(250, 250, 250);
     }
 }
@@ -307,7 +307,26 @@
 
     .swiper-button-next-about-me>.right-arrow-icon-about-me:hover,
     .swiper-button-next-about-me>.right-arrow-icon-about-me:focus {
+        fill: rgba(250, 250, 250);
         stroke: rgba(250, 250, 250);
+    }
+
+    .img-tumb-about-me {
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .img-tumb-about-me:hover,
+    .img-tumb-about-me:focus {
+        transform: scale(1.1);
+    }
+
+    .text-container-about-me {
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .text-container-about-me:hover,
+    .text-container-about-me:focus {
+        transform: scale(1.1);
     }
 }
 
