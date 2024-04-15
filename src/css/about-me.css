@@ -39,6 +39,20 @@
     .img-tumb-about-me {
         border-radius: 24px;
         width: 100%;
+        object-fit: cover;
+    }
+
+    .picture-about-me {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .picture-about-me img {
+        border-radius: 24px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
     }
 
     /* ===============accordion=============== */
@@ -209,6 +223,14 @@
         height: 500px;
     }
 
+    .picture-about-me {
+        height: 500px;
+    }
+
+    .picture-about-me img {
+        height: 500px;
+    }
+
     .accordion-container-about-me {
         margin-bottom: 64px;
     }
@@ -275,10 +297,6 @@
         padding: 64px;
     }
 
-    .img-tumb-about-me {
-        height: 700px;
-    }
-
     .accordion-item-about-me:not(:last-child) {
         margin-bottom: 64px;
     }
@@ -312,7 +330,16 @@
     }
 
     .img-tumb-about-me {
+        height: 700px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .picture-about-me {
+        height: 700px;
+    }
+
+    .picture-about-me img {
+        height: 700px;
     }
 
     .img-tumb-about-me:hover,
@@ -359,6 +386,14 @@
         width: 704px;
     }
 
+    .picture-about-me {
+        width: 704px;
+    }
+
+    .picture-about-me img {
+        width: 704px;
+    }
+
     .first-ac-panel-list {
         row-gap: 16px;
     }
@@ -393,6 +428,14 @@
     }
 
     .img-tumb-about-me {
+        width: 680px;
+    }
+
+    .picture-about-me {
+        width: 680px;
+    }
+
+    .picture-about-me img {
         width: 680px;
     }
 
