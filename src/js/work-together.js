@@ -1,6 +1,18 @@
-// import iziToast from 'izitoast';
-// import 'izitoast/dist/css/iziToast.css';
-// import postRequestPortfolioApi from './postRequestPortfolioApi';
+
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.css';
+import axios from 'axios';
+
+let postRequestPortfolioApi = async set => {
+  return await axios
+    .post('https://portfolio-js.b.goit.study/api/requests', set)
+    .then(res => {
+      return res.data;
+    });
+};
+
+
+
 
 const body = document.querySelector('body');
 const btnSubmit = document.querySelector('.btn-submit');
