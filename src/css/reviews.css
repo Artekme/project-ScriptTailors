@@ -48,7 +48,6 @@ text-align: left;
     height: 120px;
 }
 
-
 .reviews .swiper-container {
     width: 100%;
     overflow: hidden;
@@ -56,10 +55,6 @@ text-align: left;
 
 .reviews .swiper-container .swiper-wrapper{
     overflow: visible; 
-}
-.swiper-container {
-    overflow: hidden; /* Ensures nothing spills outside the swiper area */
-
     display: flex;
     flex-direction: row;
     width: 100%; 

@@ -61,7 +61,7 @@ html {
   .mobile-menu-wrapper {
     position: fixed;
     top: 0;
-    left: -150vw;
+    left: 150vw;
     right: 0;
     bottom: 0;
     width: 0;
