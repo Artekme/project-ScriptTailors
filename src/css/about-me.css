@@ -261,7 +261,7 @@
     }
 
     .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
-        width: 130px;
+        width: 130px !important;
         height: 130px;
         font-size: 16px;
     }
@@ -318,7 +318,7 @@
     }
 
     .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
-        width: 200px;
+        width: 200px !important;
         height: 200px;
         font-size: 20px;
     }
@@ -357,7 +357,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1339px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
     .about-me {
         padding-bottom: 96px;
     }
