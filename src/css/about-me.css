@@ -39,6 +39,20 @@
     .img-tumb-about-me {
         border-radius: 24px;
         width: 100%;
+        object-fit: cover;
+    }
+
+    .picture-about-me {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .picture-about-me img {
+        border-radius: 24px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
     }
 
     /* ===============accordion=============== */
@@ -209,6 +223,14 @@
         height: 500px;
     }
 
+    .picture-about-me {
+        height: 500px;
+    }
+
+    .picture-about-me img {
+        height: 500px;
+    }
+
     .accordion-container-about-me {
         margin-bottom: 64px;
     }
@@ -239,7 +261,7 @@
     }
 
     .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
-        width: 130px;
+        width: 130px !important;
         height: 130px;
         font-size: 16px;
     }
@@ -275,10 +297,6 @@
         padding: 64px;
     }
 
-    .img-tumb-about-me {
-        height: 700px;
-    }
-
     .accordion-item-about-me:not(:last-child) {
         margin-bottom: 64px;
     }
@@ -300,7 +318,7 @@
     }
 
     .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
-        width: 200px;
+        width: 200px !important;
         height: 200px;
         font-size: 20px;
     }
@@ -312,12 +330,21 @@
     }
 
     .img-tumb-about-me {
+        height: 700px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .picture-about-me {
+        height: 700px;
+    }
+
+    .picture-about-me img {
+        height: 700px;
     }
 
     .img-tumb-about-me:hover,
     .img-tumb-about-me:focus {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .text-container-about-me {
@@ -326,11 +353,11 @@
 
     .text-container-about-me:hover,
     .text-container-about-me:focus {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1339px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
     .about-me {
         padding-bottom: 96px;
     }
@@ -356,6 +383,14 @@
     }
 
     .img-tumb-about-me {
+        width: 704px;
+    }
+
+    .picture-about-me {
+        width: 704px;
+    }
+
+    .picture-about-me img {
         width: 704px;
     }
 
@@ -393,6 +428,14 @@
     }
 
     .img-tumb-about-me {
+        width: 680px;
+    }
+
+    .picture-about-me {
+        width: 680px;
+    }
+
+    .picture-about-me img {
         width: 680px;
     }
 
