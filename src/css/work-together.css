@@ -1,15 +1,20 @@
 footer {
   padding: 32px 0;
   position: relative;
-  background: url('../img/work-together/glass-effect2-mob@1x.png') repeat-y
-    right;
+  background: url('../img/work-together/glass-effect2-mob@1x.png') repeat-y right;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   footer {
-    background: url('../img/work-together/glass-effect2-mob@2x.png') repeat-y
-      right;
+    background: url('../img/work-together/glass-effect2-mob@2x.png') repeat-y right;
   }
+}
+
+.footer-container {
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .footer-container {
@@ -39,6 +44,7 @@ footer {
 .accent-color {
   color: rgb(237, 59, 68);
 }
+
 .accent-background {
   background-color: #ed3b44;
 }
@@ -168,7 +174,10 @@ footer ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1000;
   opacity: 0;
-  transition: opacity 250ms linear;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 
 .modal-background.visible {
@@ -213,16 +222,18 @@ body.modal-open {
   line-height: 1.5;
   text-align: center;
 }
+
 .modal-close {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 26px;
+  right: 26px;
   cursor: pointer;
-  background-color: transparent;
+  font-size: 26px;
   border: none;
+  outline: none;
+  background: transparent;
+  line-height: 1;
   padding: 0;
-  line-height: 0;
-
   stroke-width: 2px;
   stroke: #fafafa;
 }
@@ -240,20 +251,22 @@ body.modal-open {
   footer {
     padding-top: 85px;
     padding-bottom: 169px;
-    background: url('../img/work-together/glass-effect2-tab@1x.png') repeat-y
-      right;
+    background: url('../img/work-together/glass-effect2-tab@1x.png') repeat-y right;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
     footer {
-      background: url('../img/work-together/glass-effect2-tab@2x.png') repeat-y
-        right;
+      background: url('../img/work-together/glass-effect2-tab@2x.png') repeat-y right;
     }
   }
+
   .footer-container {
+    max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
+
   .footer-title-box {
     max-width: 542px;
     gap: 7px 20px;
@@ -309,10 +322,11 @@ body.modal-open {
     padding-bottom: 169px;
     background: url('../img/work-together/glass-effect2@1x.png') repeat-y right;
   }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
     footer {
-      background: url('../img/work-together/glass-effect2@2x.png') repeat-y
-        right;
+      background: url('../img/work-together/glass-effect2@2x.png') repeat-y right;
     }
   }
 
@@ -324,10 +338,12 @@ body.modal-open {
   .footer-title-box {
     max-width: 472px;
   }
+
   .footer-form {
     justify-content: start;
     gap: 32px;
   }
+
   .form-item {
     width: 390px;
   }
@@ -335,6 +351,7 @@ body.modal-open {
   .btn-submit {
     margin-left: 54px;
   }
+
   .success-email::after {
     top: 100px;
     left: 30px;
@@ -344,6 +361,7 @@ body.modal-open {
     top: 100px;
     left: 70px;
   }
+
   .modal-close {
     width: 24px;
     height: 24px;
