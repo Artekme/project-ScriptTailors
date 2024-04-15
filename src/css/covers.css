@@ -1,3 +1,5 @@
+/***************************COMMON STYLES************************/
+
 ul {
   list-style-type: none;
 }
@@ -48,7 +50,6 @@ ul {
   animation-duration: 15s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
 }
 
 @keyframes marqueeLine {
@@ -57,7 +58,7 @@ ul {
   }
   
   to {
-    transform: translateX(-50%);
+    transform: translateX(-180%);
   }
 }
 
@@ -86,4 +87,4 @@ ul {
 
   }
 
-    
+  
