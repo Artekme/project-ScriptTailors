@@ -18,6 +18,7 @@ function isColorTooGray(hex) {
     return max - min < 15;
 }
 
+// Оновлена функція adjustColor, яка перевіряє, чи колір не є занадто світлим або сірим
 function adjustColor(hex) {
     if (isColorTooLight(hex) || isColorTooGray(hex)) {
         const num = parseInt(hex.slice(1), 16);
@@ -53,35 +54,52 @@ function lerpColor(startHex, endHex, amt) {
 }
 
 // Основна функція для оновлення градієнта
+let animationFrameId; // ID для контролю анімації
+let currentGradient; // Зберігання поточного градієнта
+
 function updateGradient() {
     const now = Date.now();
-    const interval = (now - lastUpdateTime) / 200;
+    const interval = (now - lastUpdateTime) / 100; // Плавніше оновлення
     if (interval >= totalInterval) {
         lastUpdateTime = now;
         currentColorIndex = nextColorIndex;
         nextColorIndex = (nextColorIndex + 1) % colors.length;
         lerpPercentage = 0;
-    } else if (interval > 5) {
-        lerpPercentage = (interval - 5) / 10;
+    } else {
+        lerpPercentage = interval / totalInterval; // Плавне збільшення відсотка
     }
     const wrapper = document.querySelector('.background-wrapper');
     wrapper.style.background = lerpColor(colors[currentColorIndex], colors[nextColorIndex], lerpPercentage);
+    currentGradient = wrapper.style.background; // Оновлення поточного градієнта
+    animationFrameId = requestAnimationFrame(updateGradient);
 }
 
-// Масив кольорів для градієнта
-const colors = ['#ED3B44', '#C6E327', '#0041E8'];
+// Ініціалізація масиву кольорів для градієнта з викликом adjustColor
+const colors = ['#ED3B44', '#C6E327', '#0041E8'].map(color => adjustColor(color));
+
+// Встановлення початкового градієнта для .background-wrapper
+const wrapper = document.querySelector('.background-wrapper');
+wrapper.style.background = lerpColor(colors[0], colors[1], 0);
 let currentColorIndex = 0;
 let nextColorIndex = 1;
 let lerpPercentage = 0;
 const totalInterval = 15;
-let lastUpdateTime = 0;
+let lastUpdateTime = Date.now();
+
 
 // Додавання обробників подій для секції "hero"
 const heroSection = document.querySelector('.hero');
 heroSection.addEventListener('mouseenter', () => {
-    requestAnimationFrame(updateGradient);
+    // Відновлення анімації з поточного стану
+    if (!animationFrameId) {
+        lastUpdateTime = Date.now() - totalInterval * lerpPercentage * 50;
+        animationFrameId = requestAnimationFrame(updateGradient);
+    }
 });
 
 heroSection.addEventListener('mouseleave', () => {
-    cancelAnimationFrame(updateGradient);
+    // Зупинка анімації та збереження поточного стану
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
 });
+
