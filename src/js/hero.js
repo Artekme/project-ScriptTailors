@@ -43,8 +43,6 @@ const adjustedColors = colors.map(color => isColorTooLight(color) ? adjustColor(
 let currentColorIndex = 0;
 let nextColorIndex = 1;
 let lerpPercentage = 0;
-const totalInterval = 15; // Загальний час для циклу зміни кольору та утримання (5 секунд утримання + 10 секунд зміни)
-let lastUpdateTime = 0;
 
 // Функція для інтерполяції між двома кольорами
 function lerpColor(color1, color2, lerpFactor) {
@@ -67,23 +65,17 @@ function lerp(start, end, factor) {
     return start + (end - start) * factor;
 }
 
+// Оновлення градієнта
 function updateGradient() {
-    const currentTime = Date.now();
-    const timeElapsed = (currentTime - lastUpdateTime) / 200; // Переводимо мілісекунди у секунди
-
-    if (timeElapsed >= totalInterval) {
-        lastUpdateTime = currentTime;
-        currentColorIndex = nextColorIndex;
-        nextColorIndex = (nextColorIndex + 1) % colors.length;
-        lerpPercentage = 0;
-    } else if (timeElapsed > 5) {
-        // Починаємо змінювати колір після 5 секунд утримання
-        lerpPercentage = (timeElapsed - 5) / 10; // 10 секунд на зміну кольору
-    }
-
     const gradientElement = document.querySelector('.background-wrapper');
-    gradientElement.style.background = lerpColor(colors[currentColorIndex], colors[nextColorIndex], lerpPercentage);
+    gradientElement.style.background = lerpColor(adjustedColors[currentColorIndex], adjustedColors[nextColorIndex], lerpPercentage);
 
+    lerpPercentage += 0.005;
+    if (lerpPercentage >= 1) {
+        lerpPercentage = 0;
+        currentColorIndex = nextColorIndex;
+        nextColorIndex = (nextColorIndex + 1) % adjustedColors.length;
+    }
     requestAnimationFrame(updateGradient);
 }
 
@@ -93,9 +85,15 @@ requestAnimationFrame(updateGradient);
 // Функція для збільшення контрастності та насиченості кольору
 function enhanceColorContrastAndSaturation(hex) {
     let [h, s, l] = hexToHSL(hex);
-    s = Math.min(100, s + 20); // Збільшуємо насиченість на 20%
-    l = Math.max(0, l - 20); // Зменшуємо світлість на 10% для збільшення контрастності
-    return HSLToHex(h, s, l); // Перетворюємо назад у HEX
+
+    // Збільшуємо насиченість на 20%
+    s = Math.min(100, s + 20);
+
+    // Зменшуємо світлість на 10% для збільшення контрастності
+    l = Math.max(0, l - 20);
+
+    // Перетворюємо назад у HEX
+    return HSLToHex(h, s, l);
 }
 
 // Допоміжна функція для перетворення HSL у HEX
@@ -130,3 +128,6 @@ function HSLToHex(h, s, l) {
 
 // Застосовуємо функцію до кожного кольору в масиві
 const enhancedColors = colors.map(color => enhanceColorContrastAndSaturation(color));
+
+
+// Анімація заголовку
