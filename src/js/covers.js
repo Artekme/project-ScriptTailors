@@ -1,7 +1,9 @@
 const boxes = document.querySelectorAll('.marquee-inner');
 
+
+
 const checBoxes = () => {
-   const trigger = window.innerHeight/2;
+    const trigger = window.innerHeight/2;
     for ( const box of boxes) {
         const topOfBox = box.getBoundingClientRect().top;
         if (topOfBox < trigger) {
@@ -13,6 +15,7 @@ const checBoxes = () => {
 };
 
 checBoxes();
+
 window.addEventListener('scroll', checBoxes);
 
 
@@ -36,3 +39,4 @@ window.addEventListener('load', function () {
   
     marquee('.list-covers');
 });
+
