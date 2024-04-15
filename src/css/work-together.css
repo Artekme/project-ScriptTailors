@@ -11,6 +11,11 @@ footer {
       right;
   }
 }
+.footer-container {
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
 .footer-title-box {
   display: flex;
@@ -162,7 +167,10 @@ footer ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1000;
   opacity: 0;
-  transition: opacity 250ms linear;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 
 .modal-background.visible {
@@ -209,9 +217,17 @@ body.modal-open {
 }
 .modal-close-btn {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 26px;
+  right: 26px;
   cursor: pointer;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  background: transparent;
+  line-height: 1;
+  padding: 0;
+  stroke-width: 2px;
+  stroke: #fafafa;
 }
 
 /*----- MODAL -----*/
@@ -235,6 +251,11 @@ body.modal-open {
       background: url('../img/work-together/glass-effect2-tab@2x.png') repeat-y
         right;
     }
+  }
+  .footer-container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .footer-title-box {
