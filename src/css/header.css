@@ -4,10 +4,12 @@
 
 .header {
   width: 100%;
-  position: absolute; /* Або fixed, якщо header має бути фіксованим */
+  position: absolute;
+  /* Або fixed, якщо header має бути фіксованим */
   top: 0;
   left: 0;
-  z-index: 10; /* Забезпечуємо, що header буде над hero */
+  z-index: 10;
+  /* Забезпечуємо, що header буде над hero */
 }
 
 .header-container {
@@ -26,6 +28,7 @@
   color: #fafafa;
   line-height: 1;
 }
+
 .navigation {
   display: none;
 }
@@ -49,17 +52,18 @@
   .mobile-menu-wrapper {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 150vw;
+    right: 0;
+    bottom: 0;
+    width: 0;
     z-index: 9999;
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-      270deg,
-      rgb(28, 29, 32) 49.692%,
-      rgb(105, 41, 45) 67.704%,
-      rgb(237, 59, 68) 99.891%
-    );
+    background: linear-gradient(270deg,
+        rgb(28, 29, 32) 49.692%,
+        rgb(105, 41, 45) 67.704%,
+        rgb(237, 59, 68) 99.891%);
 
     transform: translateX(100%);
   }
