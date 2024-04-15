@@ -9,9 +9,10 @@ ul {
 
 #covers {
   background-color: #1C1D20;
-  background-image: radial-gradient(circle at 40% 20%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%),
-      radial-gradient(circle at 10% 50%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%),
-      radial-gradient(circle at 80% 80%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%);
+  background-image: 
+      radial-gradient(circle at 45% 15%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%),
+      radial-gradient(circle at 10% 55%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%),
+      radial-gradient(circle at 75% 80%, rgba(237, 59, 68, 0.6) 0%, rgba(237, 59, 68, 0) 20%);
   padding: 0px;
   overflow: hidden;
   height: 508px;
@@ -31,17 +32,17 @@ ul {
   grid-row-gap: 20px;
 }
 
-.list-covers>li {
+/*.list-covers>li {
   grid-column: span 1; 
-}
+}*/
 
 .list-covers>li:nth-child(-3n+1) {
   grid-column: 3/span 4;
 }
 
-.list-covers>li:nth-child(3n+2) {
+/*.list-covers>li:nth-child(3n+2) {
   grid-column: span 4/-3;
-}
+}*/
 
 .marquee-inner.show {
 
