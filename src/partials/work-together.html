@@ -1,31 +1,31 @@
 <footer id="work-together">
-  <div class="container footer-container">
+  <div class="footer-container">
     <div class="footer-title-box">
       <picture>
         <source
           media="(min-width:768px)"
           srcset="
-            ./img/work-together/footerPhotoDesktop.png    1x,
-            ./img/work-together/footerPhotoDesktop@2x.png 2x
+            ./img/work-together/logo@1x.webp 1x,
+            ./img/work-together/logo@2x.webp 2x
           "
-          type="image/png"
+          type="image/webp"
         />
         <source
           media="(max-width:767px)"
           srcset="
-            ./img/work-together/footerPhoto.png    1x,
-            ./img/work-together/footerPhoto@2x.png 2x
+            ./img/work-together/logo-mob@1x.webp 1x,
+            ./img/work-together/logo-mob@2x.webp 2x
           "
-          type="image/png"
+          type="image/webp"
         />
         <img
           class=" "
-          src="./img/work-together/footerPhoto.png"
+          src="./img/work-together/logo-mob@1x.webp"
           alt="photo by Jefferson"
           loading="lazy"
         />
       </picture>
-      <h2 class="footer-title">Let’s <span class="accent-color">work</span></h2>
+      <h2 class="footer-title">Let's <span class="accent-color">work</span></h2>
       <h2 class="footer-title">together</h2>
     </div>
     <form class="footer-form">
@@ -65,9 +65,16 @@
         The manager will contact you shortly to discuss further details and
         opportunities for cooperation. Please stay in touch.
       </p>
-      <svg class="modal-close" width="22" height="22">
-        <use href="./img/symbol-defts.svg#icon-close-cross"></use>
-      </svg>
+      <button class="modal-close-btn" type="button">
+        <svg
+          class="close-btn-icon"
+          width="22"
+          height="22"
+          aria-label="modal close icon"
+        >
+          <use href="./img/symbol-defs.svg#icon-close-cross"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </footer>
