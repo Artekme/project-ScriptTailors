@@ -169,6 +169,7 @@
 
     .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
         overflow: visible;
+        flex-shrink: 0;
         text-align: center;
         color: rgba(250, 250, 250, 1);
         line-height: 1.5;
