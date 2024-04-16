@@ -170,6 +170,8 @@
 
   display: flex;
   justify-content: center;
+  padding: 2px;
+
 }
 @media screen and (max-width: 767.9px) {
   .buttons-wrapper-projects {
@@ -238,12 +240,9 @@
 }
 
 
-/* Hover-Focus */
 .projects .swiper-button-prev:hover .left-arrow-icon-projects,
+.projects .swiper-button-next:hover .right-arrow-icon-projects {
 
-.projects .swiper-button-prev:focus .left-arrow-icon-projects,
-.projects .swiper-button-next:hover .right-arrow-icon-projects,
-.projects .swiper-button-next:focus .right-arrow-icon-projects {
   transform: scale(1.2);
 }
 
