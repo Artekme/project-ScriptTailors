@@ -50,3 +50,17 @@ mobileMenuItems.forEach(function (item) {
 orderProjectLinkMobile.addEventListener('click', function () {
   closeMobileMenu(); // Закриваємо мобільне меню
 });
+
+// Додаємо обробник події прокрутки для мобільної версії
+window.addEventListener('touchmove' && 'scroll', function (event) {
+  // Отримуємо поточну позицію прокрутки
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Перевіряємо, чи видно модальне вікно та напрямок прокрутки
+  if (mobileMenuWrapper.classList.contains('modal-open') && scrollTop > lastScrollTop) {
+    closeMobileMenu();
+  }
+
+  // Зберігаємо поточну позицію прокрутки
+  lastScrollTop = scrollTop;
+}, { passive: true });
