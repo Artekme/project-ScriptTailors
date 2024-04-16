@@ -2,12 +2,14 @@ import Swiper from 'swiper';
 import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import Accordion from 'accordion-js';
+
 const iconListByAccordion = document.querySelectorAll('.accordion-button-icon-about-me');
 const myAccordion = document.querySelector('.accordion-container-about-me');
 const accordionBySection = new Accordion(myAccordion, {
   showMultiple: true,
   duration: 250
 });
+
 accordionBySection.open(0);
 myAccordion.addEventListener("click", rotateIcon);
 function rotateIcon(e) {
@@ -56,3 +58,4 @@ const swiperBySection = new Swiper(swiperEl, {
   followFinger: true,
   simulateTouch: true,
 });
+
