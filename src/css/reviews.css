@@ -9,6 +9,20 @@
     text-align: left;
     margin-bottom: 32px;
     text-transform: uppercase;
+    }
+
+.review-card {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 20px;
+padding: 32px 24px;
+width: 343px;
+max-height: 310px;
+background-color: #1c1d20;
+overflow: hidden;
 }
 
 .review-list {
@@ -98,10 +112,18 @@
     align-items: center;
 }
 
+.reviews .swiper-container .swiper-button-prev:hover .swiper-icon,
+.reviews .swiper-container .swiper-button-next:hover .swiper-icon,
+.reviews .swiper-container .swiper-button-prev:focus .swiper-icon,
+.reviews .swiper-container .swiper-button-next:focus .swiper-icon {
+    transform: scale(1.2);
+}
+
 .swiper-icon {
     stroke: #fafafa;
     width: 24px;
     height: 24px;
+    transition: transform 200ms ease-in-out;
 }
 
 li.not-found-item {

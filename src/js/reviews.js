@@ -4,7 +4,6 @@ import {Navigation, Keyboard, Mousewheel} from 'swiper/modules';
 import 'swiper/css'
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-Swiper.use([Navigation, Keyboard, Mousewheel]);
 
 
 let swiper;
@@ -96,6 +95,10 @@ function initSwiper() {
         simulateTouch: true,
         updateOnWindowResize: true,
         breakpoints: {
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
             768: {
                 slidesPerView: 2,
                 slidesPerGroup: 1,
