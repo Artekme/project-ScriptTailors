@@ -187,17 +187,20 @@
 }
 
 /* When the button is disabled */
-.projects .swiper .swiper-button-disabled {
+.projects .swiper .buttons-wrapper-projects .swiper-button-disabled {
   border-color: rgb(59, 59, 59);
   pointer-events: none;
 }
 
-.projects .swiper .swiper-button-disabled .left-arrow-icon-projects,
-.projects .swiper .swiper-button-disabled .right-arrow-icon-projects {
+.projects .swiper .buttons-wrapper-projects .swiper-button-disabled .left-arrow-icon-projects,
+.projects .swiper .buttons-wrapper-projects .swiper-button-disabled .right-arrow-icon-projects {
   stroke: rgb(59, 59, 59);
+
+  transform:none
 
 }
 /*  */
+
 
 .projects .swiper-button-prev,
 .projects .swiper-button-next {
