@@ -5,7 +5,7 @@ import axios from 'axios';
 const body = document.querySelector('body');
 const btnSubmit = document.querySelector('.btn-submit');
 const modalBack = document.querySelector('.modal-background');
-const modalClose = document.querySelector('.modal-close');
+const modalClose = document.querySelector('.modal-close-btn');
 const modal = document.querySelector('.modal');
 modalClose.addEventListener('click', closeModal);
 
@@ -90,6 +90,7 @@ emailInput.addEventListener('blur', () => {
     form.classList.add('failed-email');
   }
 });
+
 let postRequestPortfolioApi = async set => {
   return await axios
     .post('https://portfolio-js.b.goit.study/api/requests', set)
