@@ -89,17 +89,37 @@ let lastUpdateTime = Date.now();
 
 // Додавання обробників подій для секції "hero"
 const heroSection = document.querySelector('.hero');
-heroSection.addEventListener('mouseenter', () => {
-    // Відновлення анімації з поточного стану
+
+// Функція для запуску анімації
+function startAnimation() {
     if (!animationFrameId) {
         lastUpdateTime = Date.now() - totalInterval * lerpPercentage * 50;
-        animationFrameId = requestAnimationFrame(updateGradient);
+        animationFrameId = requestAnimationFrame(() => updateGradient(colors, totalInterval));
+    }
+}
+
+// Функція для зупинки анімації
+function stopAnimation() {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+}
+
+// Обробник події для наведення курсору
+heroSection.addEventListener('mouseenter', startAnimation);
+
+// Обробник події для дотику
+heroSection.addEventListener('touchstart', startAnimation);
+
+// Обробник події для переміщення пальця по екрану
+heroSection.addEventListener('touchmove', startAnimation);
+
+// Обробник події для завершення дотику
+document.addEventListener('touchend', function(event) {
+    // Перевірка, чи дотик відбувся поза секцією "hero"
+    if (!heroSection.contains(event.target)) {
+        stopAnimation();
     }
 });
 
-heroSection.addEventListener('mouseleave', () => {
-    // Зупинка анімації та збереження поточного стану
-    cancelAnimationFrame(animationFrameId);
-    animationFrameId = null;
-});
-
+// Обробник події для відведення курсору
+heroSection.addEventListener('mouseleave', stopAnimation);
