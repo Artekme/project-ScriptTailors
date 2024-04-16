@@ -24,9 +24,12 @@ window.addEventListener('load', function () {
       const parentSelector = document.querySelector(selector);
       const clone = parentSelector.innerHTML;
       parentSelector.insertAdjacentHTML('afterbegin', clone);
+      parentSelector.insertAdjacentHTML('afterbegin', clone);
+      parentSelector.insertAdjacentHTML('afterbegin', clone);
       parentSelector.insertAdjacentHTML('beforeend', clone);
-      //parentSelector.insertAdjacentHTML('beforeend', clone);
-  
+      parentSelector.insertAdjacentHTML('beforeend', clone);
+      parentSelector.insertAdjacentHTML('beforeend', clone);
+
       const observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
           parentSelector.classList.add('marquee');
@@ -39,4 +42,3 @@ window.addEventListener('load', function () {
   
     marquee('.list-covers');
 });
-
