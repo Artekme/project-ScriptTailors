@@ -25,18 +25,17 @@
   text-transform: uppercase;
   margin-bottom: 32px;
 }
-
 @media screen and (max-width: 767.9px) {
   .projects .swiper-wrapper {
     margin-bottom: 32px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .projects .swiper-wrapper {
     margin-bottom: 64px;
   }
 }
+
 
 .projects .swiper-slide {
   overflow: hidden;
@@ -49,53 +48,44 @@
     flex-direction: row;
   }
 }
-
 .white-projects {
   background: rgb(250, 250, 250);
 }
-
 @media screen and (max-width: 767.9px) {
   .white-projects {
     padding: 32px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .white-projects {
     padding: 64px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .white-projects {
     width: 688px;
   }
 }
-
 .tech-list-projects {
   display: flex;
   gap: 6px;
 }
-
 @media screen and (max-width: 767.9px) {
   .tech-list-projects {
     flex-wrap: wrap;
     margin-bottom: 96px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1439.9px) {
   .tech-list-projects {
     margin-bottom: 164px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .tech-list-projects {
     margin-bottom: 223px;
   }
 }
-
 .tech-item-projects {
   font-weight: 500;
   line-height: 1.1875;
@@ -103,32 +93,27 @@
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
 }
-
 @media screen and (max-width: 767.9px) {
   .tech-item-projects {
     padding: 13px 18px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .tech-item-projects {
     padding: 18px 18px;
   }
 }
-
 .swiper-title-projects {
   font-weight: 500;
   letter-spacing: -0.03em;
   margin-bottom: 32px;
 }
-
 @media screen and (max-width: 767.9px) {
   .swiper-title-projects {
     font-size: 24px;
     line-height: 1.167;
   }
 }
-
 @media screen and (min-width: 768px) {
   .swiper-title-projects {
     font-size: 44px;
@@ -136,7 +121,6 @@
     width: 494px;
   }
 }
-
 .link-projects {
   color: rgb(250, 250, 250);
   font-weight: 500;
@@ -147,40 +131,33 @@
   background: rgb(237, 59, 68);
   transition: background-color 200ms ease-in-out;
 }
-
 .link-projects:hover,
 .link-projects:focus {
   background: rgb(224, 55, 63);
 }
-
 @media screen and (max-width: 767.9px) {
   .link-projects {
     padding: 13px 32px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .link-projects {
     padding: 18px 50px;
   }
 }
-
 .black-projects {
   background: rgb(36, 37, 39);
 }
-
 @media screen and (max-width: 767.9px) {
   .black-projects {
     padding: 100px 16px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1439.9px) {
   .black-projects {
     padding: 120px 45px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .black-projects {
     padding: 120px 37px;
@@ -188,18 +165,20 @@
   }
 }
 
+
 .buttons-wrapper-projects {
+
   display: flex;
   justify-content: center;
   padding: 2px;
 
 }
-
 @media screen and (max-width: 767.9px) {
   .buttons-wrapper-projects {
     gap: 12px;
   }
 }
+
 
 @media screen and (min-width: 768px) {
   .buttons-wrapper-projects {
@@ -216,6 +195,7 @@
 .projects .swiper .swiper-button-disabled .left-arrow-icon-projects,
 .projects .swiper .swiper-button-disabled .right-arrow-icon-projects {
   stroke: rgb(59, 59, 59);
+
 }
 /*  */
 
@@ -227,8 +207,17 @@
   transition: border-color 200ms ease-in-out;
 }
 
+.projects .swiper-button-prev:hover,
+.projects .swiper-button-prev:focus,
+.projects .swiper-button-next:hover,
+.projects .swiper-button-next:focus {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+
 @media screen and (max-width: 767.9px) {
-  .projects .swiper-button-prev,
+
+.projects .swiper-button-prev,
   .projects .swiper-button-next {
     padding: 14px;
     width: 52px;
@@ -244,15 +233,16 @@
     height: 68px;
   }
 }
-
 .left-arrow-icon-projects,
 .right-arrow-icon-projects {
   stroke: rgb(250, 250, 250);
   transition: all 200ms ease-in-out;
 }
 
+
 .projects .swiper-button-prev:hover .left-arrow-icon-projects,
 .projects .swiper-button-next:hover .right-arrow-icon-projects {
+
   transform: scale(1.2);
 }
 
@@ -263,7 +253,6 @@
     height: 24px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .left-arrow-icon-projects,
   .right-arrow-icon-projects {
