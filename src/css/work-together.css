@@ -13,6 +13,12 @@ footer {
 }
 .footer-container {
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.footer-logo-img {
+  width: 44px;
+  height: 44px;
 }
 .footer-title-box {
   display: flex;
@@ -236,8 +242,6 @@ body.modal-open {
   }
   .footer-container {
     max-width: 375px;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
@@ -259,6 +263,10 @@ body.modal-open {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+  .footer-logo-img {
+    width: 70px;
+    height: 70px;
   }
 
   .footer-title-box {
