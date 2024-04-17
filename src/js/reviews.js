@@ -103,14 +103,13 @@ function initSwiper() {
                 slidesPerView: 2,
                 slidesPerGroup: 1,
             },
-            1400: {
+            1440: {
                 slidesPerView: 4,
                 slidesPerGroup: 1,
             }
         }
         
-})
-    updateNavigationButtons();
+});
 
     swiper.on('slideChange', ()=> {
         updateNavigationButtons()
