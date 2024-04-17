@@ -15,6 +15,11 @@
 @import url('./reviews.css');
 @import url('./work-together.css');
 
+@font-face {
+  font-family: "Inter Tight";
+  src: url("../public/InterTight-VariableFont_wght.ttf");
+  }
+  
 :root {
   --font-family: "Inter Tight", sans-serif;
   --font-size: 16px;
@@ -34,6 +39,7 @@
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-delay: 0;
 }
+
 body {
   font-family: "Inter Tight", sans-serif;
 font-size: 16px;
