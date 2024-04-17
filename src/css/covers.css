@@ -4,7 +4,16 @@ ul {
   list-style-type: none;
 }
 .title-covers{
-  display: none;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    clip-path: inset(100%);
 }
 
 #covers {
@@ -24,15 +33,17 @@ ul {
   transform: rotate(16deg);
 }
 
+.marquee { 
+  transform: translateY(-150px);
+}
+
 .list-covers {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(16, max-content);
+  grid-template-columns: repeat(18, max-content);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-
-
 
 .marquee-inner.show {
 
@@ -75,6 +86,5 @@ ul {
   #covers {
       margin: 0;
 }   
-
 
   }
