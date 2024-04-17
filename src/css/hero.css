@@ -121,7 +121,7 @@ a:hover {
 }
 
 .circle:hover {
-  transform: rotate(360deg);
+  transform: scale(1.2); /* Збільшити кнопку на 10% */
   border: 1px solid #fafafa;
 }
 
@@ -146,6 +146,7 @@ a:hover {
 }
 
 .circle-email:hover {
+  transform: scale(1); /* Збільшити кнопку на 10% */
   border: 1px solid #fafafa;
 }
 
@@ -198,6 +199,11 @@ a:hover {
     height: 55px;
   }
 
+  .circle:hover {
+    transform: scale(1.2); /* Збільшити кнопку на 10% */
+    border: 1px solid #fafafa;
+  }
+
   .hero-address-mail-link {
     font-size: 16px;
   }
@@ -209,6 +215,11 @@ a:hover {
 
   .container-hero {
     margin-bottom: 0;
+  }
+
+  .circle-email:hover {
+    transform: scale(1); /* Збільшити кнопку на 10% */
+    border: 1px solid #fafafa;
   }
 
   @media screen and (min-resolution: 192dpi),
