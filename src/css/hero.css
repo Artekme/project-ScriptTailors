@@ -1,0 +1,234 @@
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  margin-bottom: 64px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.background-wrapper {
+  position: relative; /* Для позиціонування псевдоелемента */
+}
+
+.background-wrapper::after {
+  filter: contrast(400%);
+  z-index: 1;
+  /* Додаємо прозоре зображення */
+  content: '';
+  background-image: url('../img/hero/glass-effect1-mob@1x.png');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute; /* Абсолютне позиціонування */
+}
+
+.background-gradient-top {
+  background-image: linear-gradient(
+    -90deg,
+    rgba(28, 29, 32, 1),
+    rgba(28, 29, 32, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+/* MOBILE 320px */
+@media screen and (min-width: 320px) {
+  .hero-title {
+    margin: 0 auto;
+    max-width: 288px;
+    /* padding-left: 16px; */
+  }
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .background-wrapper {
+    background-image: url('../img/hero/glass-effect1-mob@2x.png');
+  }
+}
+
+.hero-title {
+  margin: 0 auto;
+  max-width: 343px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+  padding-bottom: 212px;
+  padding-top: 281px;
+}
+
+.hero-address-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  padding-bottom: 32px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.hero-address-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  text-transform: uppercase;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle:hover {
+  transform: rotate(360deg);
+  border: 1px solid #fafafa;
+}
+
+.hero-address-mail-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.circle-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 178px;
+  height: 37px;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-email:hover {
+  border: 1px solid #fafafa;
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+  .background-wrapper::after {
+    z-index: 1;
+    /* Додаємо прозоре зображення */
+    content: '';
+    background-image: url('../img/hero/glass-effect1-tab@1x.png');
+    opacity: 100; /* Встановлюємо прозорість зображення */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; /* Абсолютне позиціонування */
+  }
+
+  .hero-title {
+    font-size: 90px;
+    padding-bottom: 187px;
+    padding-top: 300px;
+    max-width: 768px;
+    margin: 0;
+    padding-left: 32px;
+    margin: 0 auto;
+  }
+
+  .hero-address-list {
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .hero-address-link {
+    font-size: 16px;
+  }
+
+  .circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .hero-address-mail-link {
+    font-size: 16px;
+  }
+
+  .circle-email {
+    width: 223px;
+    height: 55px;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 192dpi),
+    screen and (min-device-pixel-ratio: 2) {
+    .background-wrapper {
+      background-image: url('../img/hero/glass-effect1-tab@2x.png');
+    }
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1440px) {
+  .background-wrapper::after {
+    z-index: 1;
+    /* Додаємо прозоре зображення */
+    content: '';
+    background-image: url('../img/hero/glass-effect1@1x.png');
+    opacity: 100; /* Встановлюємо прозорість зображення */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; /* Абсолютне позиціонування */
+  }
+
+  .hero {
+    margin-bottom: 96px;
+  }
+
+  .hero-title {
+    margin: 0 auto;
+    max-width: 1084px;
+    font-size: 90px;
+    padding-bottom: 243px;
+    padding-top: 300px;
+    padding-left: 0;
+  }
+
+  .hero-address-list {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .background-wrapper {
+      background-image: url('../img/hero/glass-effect1@2x.png');
+    }
+  }
+}

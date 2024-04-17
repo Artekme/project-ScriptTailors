@@ -1,0 +1,80 @@
+<footer id="work-together">
+  <div class="footer-container">
+    <div class="footer-title-box">
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="
+            ./img/work-together/logo@1x.webp 1x,
+            ./img/work-together/logo@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(max-width:767px)"
+          srcset="
+            ./img/work-together/logo-mob@1x.webp 1x,
+            ./img/work-together/logo-mob@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <img
+          class=" "
+          src="./img/work-together/logo-mob@1x.webp"
+          alt="photo by Jefferson"
+          loading="lazy"
+        />
+      </picture>
+      <h2 class="footer-title">Let's <span class="accent-color">work</span></h2>
+      <h2 class="footer-title">together</h2>
+    </div>
+    <form class="footer-form">
+      <input
+        class="form-item"
+        type="email"
+        name="email"
+        placeholder="clients@gmail.com"
+        pattern="(^[^\s@]+@[^\s@]+\.[^\s@]+$)"
+        autocomplete="off"
+        required
+      />
+      <input
+        class="form-item"
+        type="text"
+        name="comments"
+        placeholder="comments"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="btn-submit">Send</button>
+    </form>
+    <ul>
+      <li class="footer-link">
+        <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+      </li>
+      <li class="footer-link">
+        <a href="tel:+3801111111111">+380 11 1111 11 11</a>
+      </li>
+    </ul>
+  </div>
+  <!-- MODAL -->
+  <div class="modal-background">
+    <div class="modal container">
+      <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+      <p class="modal-text">
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+      <button class="modal-close-btn" type="button">
+        <svg
+          class="close-btn-icon"
+          width="22"
+          height="22"
+          aria-label="modal close icon"
+        >
+          <use href="./img/symbol-defs.svg#icon-close-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</footer>
