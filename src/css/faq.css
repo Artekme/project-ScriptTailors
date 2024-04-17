@@ -55,6 +55,7 @@
     position: absolute;
     right: 0;
     top: 20px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-arrow-down {
@@ -64,6 +65,18 @@
     position: absolute;
     top: 7px;
     left: 6px;
+}
+
+.clicked {
+    transform: rotate(-180deg);
+}
+
+#acc-first-btn-faq .faq-icon {
+    transform: rotate(-180deg);
+}
+
+#acc-first-btn-faq .faq-icon.clicked {
+    transform: rotate(0deg);
 }
 
 .faq-item-content {
