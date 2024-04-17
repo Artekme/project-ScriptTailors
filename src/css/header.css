@@ -131,7 +131,7 @@ html {
 @media screen and (min-width: 768px) {
   #header.header,
   #hero .container-hero {
-    animation: showElements 0.5s linear forwards;
+    animation: showElements 1.7s linear forwards;
   }
 
   .mobile-menu-open-btn {
