@@ -12,8 +12,10 @@
     </a>
 
     <nav class="navigation">
-      <a href="#" class="title-navigation">Menu</a>
-      <ul class="list-navigation hidden">
+      <a href="javascript:void(0)" class="title-navigation menu-trigger"
+        >Menu</a
+      >
+      <ul class="list-navigation">
         <li class="item-navigation">
           <a href="#about-me" class="link-item-navigation">About me</a>
         </li>
@@ -34,32 +36,15 @@
         >Order the project</a
       >
     </div>
-
-    <button class="mobile-menu-open-btn" type="button">
-      <svg
-        class="mobile-menu-open-btn-icon"
-        width="28"
-        height="28"
-        aria-label="mobile menu open icon"
-      >
-        <use href="./img/symbol-defs.svg#burger-icon"></use>
-      </svg>
-    </button>
   </div>
 </header>
 
+<button class="mobile-menu-open-btn menu-trigger" type="button">
+  <span></span>
+</button>
+
 <!-- Mobile menu -->
 <div class="mobile-menu-wrapper">
-  <button class="mobile-menu-close-btn" type="button">
-    <svg
-      class="mobile-menu-close-btn-icon"
-      width="14"
-      height="14"
-      aria-label="mobile menu close icon"
-    >
-      <use href="./img/symbol-defs.svg#icon-close-cross"></use>
-    </svg>
-  </button>
   <div class="mobile-menu-container">
     <nav class="navigation-mobile-menu">
       <ul class="list-navigation-mobile-menu">
