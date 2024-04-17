@@ -130,9 +130,11 @@
         top: 10px;
         left: 9px;
     }
+    
 
     .faq-button {
         padding: 32px 0;
+        padding-right: 100px;
     }
 
 } 
