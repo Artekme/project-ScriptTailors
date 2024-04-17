@@ -157,6 +157,12 @@ footer ul {
 }
 
 /*----- MODAL -----*/
+/* ADD */
+.modal {
+  /* Existing styles */
+  backface-visibility: visible; /* Added */
+}
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -166,10 +172,7 @@ footer ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1000;
   opacity: 0;
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
+  transition: opacity 0.3s ease;
 }
 
 .modal-background.visible {
@@ -194,8 +197,16 @@ body.modal-open {
   z-index: 2000;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 343px;
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s ease;
+}
+
+.modal.visible {
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(360deg);
+}
+
+.modal-content {
+  transform: rotateY(180deg); /* Added */
 }
 
 .modal-title {
@@ -214,6 +225,7 @@ body.modal-open {
   line-height: 1.5;
   text-align: center;
 }
+
 .modal-close-btn {
   position: absolute;
   top: 26px;
