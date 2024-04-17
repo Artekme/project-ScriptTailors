@@ -8,28 +8,40 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   z-index: 2;
 }
 
-.background-wrapper {
-  position: relative; /* Для позиціонування псевдоелемента */
+.container-hero {
+  width: 100%;
+  min-height: 100vh;
 }
 
-.background-wrapper::after {
-  filter: contrast(400%);
-  z-index: 1;
-  /* Додаємо прозоре зображення */
-  content: '';
-  background-image: url('../img/hero/glass-effect1-mob@1x.png');
+.background-wrapper {
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  position: absolute; /* Абсолютне позиціонування */
+  z-index: 1;
+}
+
+.background-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/hero/glass-effect1-mob@1x.png');
+  filter: contrast(400%);
+  z-index: -1;
 }
 
 .background-gradient-top {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
   background-image: linear-gradient(
     -90deg,
     rgba(28, 29, 32, 1),
@@ -38,20 +50,13 @@
   );
 }
 
-/* MOBILE 320px */
-@media screen and (min-width: 320px) {
-  .hero-title {
-    margin: 0 auto;
-    max-width: 288px;
-    /* padding-left: 16px; */
-  }
-}
-
 @media screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .background-wrapper {
     background-image: url('../img/hero/glass-effect1-mob@2x.png');
+    background-size: cover;
+    background-position: center top;
   }
 }
 
@@ -64,8 +69,8 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  padding-bottom: 212px;
-  padding-top: 281px;
+  margin-bottom: 281px;
+  margin-top: 281px;
 }
 
 .hero-address-list {
@@ -73,7 +78,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 4px;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 a:hover {
@@ -102,7 +107,7 @@ a:hover {
 }
 
 .circle:hover {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
   border: 1px solid #fafafa;
 }
 
@@ -134,29 +139,27 @@ a:hover {
 
 @media screen and (min-width: 768px) {
   .background-wrapper::after {
-    z-index: 1;
-    /* Додаємо прозоре зображення */
+    z-index: -1;
     content: '';
     background-image: url('../img/hero/glass-effect1-tab@1x.png');
-    opacity: 100; /* Встановлюємо прозорість зображення */
+    opacity: 1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: absolute; /* Абсолютне позиціонування */
+    position: absolute;
   }
 
   .hero-title {
-    font-size: 90px;
-    padding-bottom: 187px;
-    padding-top: 300px;
-    max-width: 768px;
-    margin: 0;
-    padding-left: 32px;
     margin: 0 auto;
+    font-size: 90px;
+    margin-bottom: 274px;
+    margin-top: 300px;
+    max-width: 707px;
   }
 
   .hero-address-list {
+    width: 100%;
     gap: 10px;
     justify-content: flex-end;
   }
@@ -180,7 +183,6 @@ a:hover {
   }
 
   @media screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 192dpi),
     screen and (min-device-pixel-ratio: 2) {
     .background-wrapper {
       background-image: url('../img/hero/glass-effect1-tab@2x.png');
@@ -192,16 +194,15 @@ a:hover {
 
 @media screen and (min-width: 1440px) {
   .background-wrapper::after {
-    z-index: 1;
-    /* Додаємо прозоре зображення */
+    z-index: -1; /* Змінено на -1, щоб бути під іншими елементами */
     content: '';
     background-image: url('../img/hero/glass-effect1@1x.png');
-    opacity: 100; /* Встановлюємо прозорість зображення */
+    opacity: 1; /* Виправлено значення прозорості */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: absolute; /* Абсолютне позиціонування */
+    position: absolute;
   }
 
   .hero {
@@ -212,20 +213,16 @@ a:hover {
     margin: 0 auto;
     max-width: 1084px;
     font-size: 90px;
-    padding-bottom: 243px;
-    padding-top: 300px;
-    padding-left: 0;
+    margin-bottom: 243px;
+    margin-top: 300px;
   }
 
   .hero-address-list {
-    gap: 10px;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
   }
 
   @media screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx),
     screen and (min-device-pixel-ratio: 2) {
     .background-wrapper {
       background-image: url('../img/hero/glass-effect1@2x.png');
