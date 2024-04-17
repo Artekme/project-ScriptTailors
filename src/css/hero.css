@@ -12,11 +12,6 @@
   z-index: 2;
 }
 
-.container-hero {
-  width: 100%;
-  min-height: 100%;
-}
-
 .background-wrapper {
   position: relative;
   top: 0;
@@ -39,9 +34,9 @@
 }
 
 .background-gradient-top {
+  flex-direction: column;
   display: flex;
   max-width: 100%;
-  justify-content: center;
   background-image: linear-gradient(
     -90deg,
     rgba(28, 29, 32, 1),
@@ -69,13 +64,25 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  margin-bottom: 281px;
+  margin-bottom: 212px;
   margin-top: 281px;
+}
+
+.container-hero {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.hero-address{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-address-list {
   display: flex;
   flex-wrap: wrap;
+  width: 343px;
   justify-content: center;
   gap: 4px;
   margin-bottom: 32px;
@@ -102,12 +109,12 @@ a:hover {
   height: 37px;
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  transition-duration: 250ms;
+  transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .circle:hover {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
   border: 1px solid #fafafa;
 }
 
@@ -153,13 +160,18 @@ a:hover {
   .hero-title {
     margin: 0 auto;
     font-size: 90px;
-    margin-bottom: 274px;
+    margin-bottom: 187px;
     margin-top: 300px;
     max-width: 707px;
   }
 
+  .hero-address {
+    margin: 0 auto;
+    width: 704px;
+  }
+
   .hero-address-list {
-    width: 100%;
+    width: 704px;
     gap: 10px;
     justify-content: flex-end;
   }
@@ -215,6 +227,13 @@ a:hover {
     font-size: 90px;
     margin-bottom: 243px;
     margin-top: 300px;
+  }
+
+  .hero-address {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 1376px;
   }
 
   .hero-address-list {
