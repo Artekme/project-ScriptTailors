@@ -16,7 +16,6 @@
         padding: 32px;
         border-radius: 24px;
         background-color: rgba(36, 37, 39, 1);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         width: 100%;
         margin-bottom: 16px;
     }
@@ -39,6 +38,20 @@
     .img-tumb-about-me {
         border-radius: 24px;
         width: 100%;
+        object-fit: cover;
+    }
+
+    .picture-about-me {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .picture-about-me img {
+        border-radius: 24px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
     }
 
     /* ===============accordion=============== */
@@ -47,12 +60,12 @@
         background-color: transparent;
     }
 
-    .accordion-item-about-me {
+    .accordion-item-about-me.ac {
         position: relative;
         background-color: transparent;
     }
 
-    .accordion-item-title-about-me {
+    .accordion-item-title-about-me.ac-header {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -75,7 +88,7 @@
         height: 1px;
     }
 
-    .accordion-button-about-me {
+    .accordion-button-about-me.ac-trigger {
         border: 1px solid rgba(250, 250, 250, 0.2);
         border-radius: 50%;
         display: flex;
@@ -83,13 +96,11 @@
         align-items: center;
         background-color: transparent;
         line-height: 0;
-        fill: none;
-        stroke: rgba(250, 250, 250, 1);
     }
 
-    .accordion-button-icon {
+    .accordion-button-icon-about-me {
         overflow: visible;
-        fill: none;
+        fill: rgba(250, 250, 250, 1);
         stroke: rgba(250, 250, 250, 1);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -98,22 +109,22 @@
         transform: rotate(-180deg);
     }
 
-    #acc-first-btn .accordion-button-icon {
+    #ac-trigger-0 .accordion-button-icon-about-me {
         transform: rotate(-180deg);
     }
 
-    #acc-first-btn .accordion-button-icon.clicked {
+    #ac-trigger-0 .accordion-button-icon-about-me.clicked {
         transform: rotate(0deg);
     }
 
-    .list-accordion-text-about-me {
+    .list-accordion-text-about-me.ac-text {
         display: flex;
         flex-direction: column;
         row-gap: 10px;
         margin-top: 8px;
     }
 
-    .first {
+    .first-ac-panel-list {
         row-gap: 32px;
     }
 
@@ -125,22 +136,25 @@
         color: rgba(250, 250, 250, 1);
     }
 
-    .ac-panel {
+    .accordion-panel-about-me.ac-panel {
         overflow: hidden;
         transition-property: height, visibility;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .ac.js-enabled {
-        .ac-panel {
-            visibility: hidden;
-        }
+    accordion-item-about-me.ac.js-enabled .accordion-panel-about-me.ac-panel {
+        visibility: hidden;
     }
+
+    .accordion-item-about-me.ac.is-active .accordion-panel-about-me.ac-panel {
+        visibility: visible;
+    }
+
 
     /* ==================swiper================= */
 
-    .swiperc {
+    .swiperc.swiper-container-about-me {
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -148,12 +162,13 @@
         min-width: 0;
     }
 
-    .swiperc .swiper {
+    .swiperc.swiper-container-about-me .swiper.swiper2 {
         margin: 0;
     }
 
-    .swiper-wrapper .swiper-slide {
+    .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
         overflow: visible;
+        flex-shrink: 0;
         text-align: center;
         color: rgba(250, 250, 250, 1);
         line-height: 1.5;
@@ -167,11 +182,11 @@
         align-items: center;
     }
 
-    .swiper-wrapper .swiper-slide.swiper-slide-active {
+    .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me.swiper-slide-active {
         background-color: rgba(237, 59, 68, 1);
     }
 
-    .swiper-button-next {
+    .swiper-button-next-about-me {
         z-index: 56545;
         border: none;
         background-color: transparent;
@@ -179,9 +194,10 @@
         line-height: 0;
     }
 
-    .swiper-button-next>.right-arrow-icon-about-me {
+    .swiper-button-next-about-me>.right-arrow-icon-about-me {
+        fill: rgba(250, 250, 250, 0.2);
         stroke: rgba(250, 250, 250, 0.2);
-        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
@@ -207,6 +223,14 @@
         height: 500px;
     }
 
+    .picture-about-me {
+        height: 500px;
+    }
+
+    .picture-about-me img {
+        height: 500px;
+    }
+
     .accordion-container-about-me {
         margin-bottom: 64px;
     }
@@ -215,46 +239,46 @@
         margin-bottom: 48px;
     }
 
-    .ac-trigger {
+    .accordion-button-about-me.ac-trigger {
         padding: 9px;
         width: 36px;
         height: 36px;
     }
 
-    .ac.is-active {
-        .ac-panel {
-            visibility: visible;
-        }
-
-        &.accordion-item-about-me:after {
-            bottom: -24px;
-        }
+    .accordion-item-about-me.ac.is-active .accordion-item-about-me:after {
+        bottom: -24px;
     }
+
 
     /* ==================swiper============== */
 
-    .swiperc {
+    .swiperc.swiper-container-about-me {
         max-width: 343px;
     }
 
-    .swiper {
+    .swiper.swiper2 {
         max-width: 260px;
     }
 
-    .swiper-wrapper .swiper-slide {
-        width: 130px;
+    .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
+        width: 130px !important;
         height: 130px;
         font-size: 16px;
     }
 
-    .swiper-button-next {
+    .swiper-button-next-about-me {
         width: 28px;
         height: 28px;
     }
 
-    .swiper-button-next>.right-arrow-icon-about-me {
+    .swiper-button-next-about-me>.right-arrow-icon-about-me {
         width: 28px;
         height: 28px;
+    }
+
+    .swiper-button-next-about-me>.right-arrow-icon-about-me:active {
+        fill: rgba(250, 250, 250);
+        stroke: rgba(250, 250, 250);
     }
 }
 
@@ -273,49 +297,67 @@
         padding: 64px;
     }
 
-    .img-tumb-about-me {
-        height: 700px;
-    }
-
     .accordion-item-about-me:not(:last-child) {
         margin-bottom: 64px;
     }
 
-    .ac-trigger {
+    .accordion-button-about-me.ac-trigger {
         padding: 10px;
         width: 40px;
         height: 40px;
     }
 
-    .ac.is-active {
-        .ac-panel {
-            visibility: visible;
-        }
-    }
-
-    .swiper-button-next {
+    .swiper-button-next-about-me {
         width: 40px;
         height: 40px;
     }
 
-    .swiper-button-next>.right-arrow-icon-about-me {
+    .swiper-button-next-about-me>.right-arrow-icon-about-me {
         width: 40px;
         height: 40px;
     }
 
-    .swiper-wrapper .swiper-slide {
-        width: 200px;
+    .swiper-wrapper.swiper-wrapper-about-me .swiper-slide.swiper-slide-about-me {
+        width: 200px !important;
         height: 200px;
         font-size: 20px;
     }
 
-    .swiper-button-next>.right-arrow-icon-about-me:hover,
-    .swiper-button-next>.right-arrow-icon-about-me:focus {
+    .swiper-button-next-about-me>.right-arrow-icon-about-me:hover,
+    .swiper-button-next-about-me>.right-arrow-icon-about-me:focus {
+        fill: rgba(250, 250, 250);
         stroke: rgba(250, 250, 250);
+    }
+
+    .img-tumb-about-me {
+        height: 700px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .picture-about-me {
+        height: 700px;
+    }
+
+    .picture-about-me img {
+        height: 700px;
+    }
+
+    .img-tumb-about-me:hover,
+    .img-tumb-about-me:focus {
+        transform: scale(1.05);
+    }
+
+    .text-container-about-me {
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .text-container-about-me:hover,
+    .text-container-about-me:focus {
+        transform: scale(1.05);
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1339px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
     .about-me {
         padding-bottom: 96px;
     }
@@ -332,7 +374,7 @@
         margin-bottom: 96px;
     }
 
-    .list-accordion-text-about-me {
+    .list-accordion-text-about-me.ac-text {
         text-align: justify;
     }
 
@@ -344,15 +386,23 @@
         width: 704px;
     }
 
-    .first {
+    .picture-about-me {
+        width: 704px;
+    }
+
+    .picture-about-me img {
+        width: 704px;
+    }
+
+    .first-ac-panel-list {
         row-gap: 16px;
     }
 
-    .swiperc {
+    .swiperc.swiper-container-about-me {
         max-width: 704px;
     }
 
-    .swiper {
+    .swiper.swiper2 {
         max-width: 600px;
     }
 }
@@ -369,7 +419,7 @@
     .resume-container-about-me {
         width: 1376px;
         display: flex;
-        column-gap: 10px;
+        column-gap: 16px;
     }
 
     .text-container-about-me {
@@ -378,6 +428,14 @@
     }
 
     .img-tumb-about-me {
+        width: 680px;
+    }
+
+    .picture-about-me {
+        width: 680px;
+    }
+
+    .picture-about-me img {
         width: 680px;
     }
 
@@ -395,12 +453,12 @@
         margin-right: 68px;
     }
 
-    .swiperc {
+    .swiperc.swiper-container-about-me {
         max-width: 1312px;
         margin: 0 auto;
     }
 
-    .swiper {
+    .swiper.swiper2 {
         max-width: 1200px;
     }
 }
