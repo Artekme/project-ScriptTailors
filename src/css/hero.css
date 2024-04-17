@@ -1,15 +1,19 @@
-.hero {
+.hero .container {
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
   position: relative;
   overflow: hidden;
   width: 100%;
   min-height: 100%;
   z-index: 2;
+}
+
+.hero {
+  margin-bottom: 64px;
 }
 
 .background-wrapper {
@@ -56,7 +60,9 @@
 }
 
 .hero-title {
-  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 343px;
   font-weight: 500;
   font-size: 50px;
@@ -68,24 +74,25 @@
   margin-top: 281px;
 }
 
-.container-hero {
+/* .container-hero {
   display: flex;
   flex-wrap: nowrap;
-}
+} */
 
-.hero-address{
+.hero-address {
+  max-width: 343px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-bottom: 32px;
 }
 
 .hero-address-list {
   display: flex;
   flex-wrap: wrap;
-  width: 343px;
+  max-width: 343px;
   justify-content: center;
   gap: 4px;
-  margin-bottom: 32px;
 }
 
 a:hover {
@@ -145,6 +152,10 @@ a:hover {
 /* TABLET */
 
 @media screen and (min-width: 768px) {
+  .hero {
+    margin-bottom: 64px;
+  }
+
   .background-wrapper::after {
     z-index: -1;
     content: '';
@@ -167,11 +178,13 @@ a:hover {
 
   .hero-address {
     margin: 0 auto;
-    width: 704px;
+    max-width: 704px;
+    height: 55px;
+    margin-bottom: 32px;
   }
 
   .hero-address-list {
-    width: 704px;
+    max-width: 704px;
     gap: 10px;
     justify-content: flex-end;
   }
@@ -194,11 +207,21 @@ a:hover {
     height: 55px;
   }
 
+  .container-hero {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-resolution: 192dpi),
     screen and (min-device-pixel-ratio: 2) {
     .background-wrapper {
       background-image: url('../img/hero/glass-effect1-tab@2x.png');
     }
+  }
+}
+
+@media screen and (max-width: 373px) {
+  .hero-address-list {
+    gap: 10px;
   }
 }
 
@@ -233,7 +256,8 @@ a:hover {
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
-    width: 1376px;
+    max-width: 1376px;
+    margin-bottom: 32px;
   }
 
   .hero-address-list {
