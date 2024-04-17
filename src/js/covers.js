@@ -1,12 +1,12 @@
 const boxes = document.querySelectorAll('.marquee-inner');
-
-
+const containerCovers = document.querySelector(".container-covers");
 
 const checBoxes = () => {
     const trigger = window.innerHeight/2;
     for ( const box of boxes) {
-        const topOfBox = box.getBoundingClientRect().top;
-        if (topOfBox < trigger) {
+      const topSectionCovers =containerCovers.getBoundingClientRect().top;
+
+        if (topSectionCovers < trigger) {
             box.classList.add('show');
         } else { 
             box.classList.remove('show');
