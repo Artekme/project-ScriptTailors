@@ -66,7 +66,7 @@ let currentGradient; // Зберігання поточного градієнт
 
 function updateGradient() {
     const now = Date.now();
-    const interval = (now - lastUpdateTime) / 50; // Плавніше оновлення
+    const interval = (now - lastUpdateTime) / 250; // Плавніше оновлення
     if (interval >= totalInterval) {
         lastUpdateTime = now;
         currentColorIndex = nextColorIndex;
