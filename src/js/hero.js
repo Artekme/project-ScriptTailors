@@ -21,10 +21,18 @@ function isColorTooGray(hex) {
 // Оновлена функція adjustColor, яка перевіряє, чи колір не є занадто світлим або сірим
 function adjustColor(hex) {
     if (isColorTooLight(hex) || isColorTooGray(hex)) {
+        // Замість того, щоб просто затемнювати колір, змінимо його на більш насичений
         const num = parseInt(hex.slice(1), 16);
-        let red = (num >> 16 & 255) * .8;
-        let green = (num >> 8 & 255) * .8;
-        let blue = (num & 255) * .8;
+        let red = (num >> 16 & 255) + 20;
+        let green = (num >> 8 & 255) + 20;
+        let blue = (num & 255) + 20;
+
+        // Перевірка, щоб значення не вийшли за межі 255
+        red = Math.min(255, red);
+        green = Math.min(255, green);
+        blue = Math.min(255, blue);
+
+        // Конвертація назад у шістнадцятковий формат
         red = Math.round(red).toString(16).padStart(2, "0");
         green = Math.round(green).toString(16).padStart(2, "0");
         blue = Math.round(blue).toString(16).padStart(2, "0");
@@ -32,7 +40,6 @@ function adjustColor(hex) {
     }
     return hex;
 }
-
 // Функції для плавної зміни кольору
 function lerp(start, end, amt) {
     return start + (end - start) * amt;
@@ -89,17 +96,37 @@ let lastUpdateTime = Date.now();
 
 // Додавання обробників подій для секції "hero"
 const heroSection = document.querySelector('.hero');
-heroSection.addEventListener('mouseenter', () => {
-    // Відновлення анімації з поточного стану
+
+// Функція для запуску анімації
+function startAnimation() {
     if (!animationFrameId) {
         lastUpdateTime = Date.now() - totalInterval * lerpPercentage * 50;
-        animationFrameId = requestAnimationFrame(updateGradient);
+        animationFrameId = requestAnimationFrame(() => updateGradient(colors, totalInterval));
+    }
+}
+
+// Функція для зупинки анімації
+function stopAnimation() {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+}
+
+// Обробник події для наведення курсору
+heroSection.addEventListener('mouseenter', startAnimation);
+
+// Обробник події для дотику
+heroSection.addEventListener('touchstart', startAnimation);
+
+// Обробник події для переміщення пальця по екрану
+heroSection.addEventListener('touchmove', startAnimation);
+
+// Обробник події для завершення дотику
+document.addEventListener('touchend', function (event) {
+    // Перевірка, чи дотик відбувся поза секцією "hero"
+    if (!heroSection.contains(event.target)) {
+        stopAnimation();
     }
 });
 
-heroSection.addEventListener('mouseleave', () => {
-    // Зупинка анімації та збереження поточного стану
-    cancelAnimationFrame(animationFrameId);
-    animationFrameId = null;
-});
-
+// Обробник події для відведення курсору
+heroSection.addEventListener('mouseleave', stopAnimation);
