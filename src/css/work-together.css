@@ -157,7 +157,6 @@ footer ul {
 }
 
 /*----- MODAL -----*/
-/* ADD */
 .modal {
   /* Existing styles */
   backface-visibility: visible; /* Added */
@@ -199,6 +198,7 @@ body.modal-open {
   left: 50%;
   transform: translate(-50%, -50%) perspective(1000px) rotateY(0deg);
   transition: transform 0.5s ease;
+  width: 288px;
 }
 
 .modal.visible {
@@ -239,6 +239,7 @@ body.modal-open {
   padding: 0;
   stroke-width: 2px;
   stroke: #fafafa;
+  height: 22px;
 }
 
 /*----- MODAL -----*/
@@ -315,7 +316,6 @@ body.modal-open {
   }
 
   .modal {
-    max-width: 500px;
     width: 495px;
     padding: 64px 58px;
   }
@@ -364,8 +364,6 @@ body.modal-open {
   .modal-close-btn {
     top: 26px;
     right: 26px;
-  }
-  .close-btn-icon {
     width: 24px;
     height: 24px;
   }
