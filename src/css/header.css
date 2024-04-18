@@ -41,7 +41,7 @@ html {
   display: none;
 }
 
-@media screen and (max-width: 767.99px) {
+@media screen and (max-width: 767.9px) {
   /* For hidden elements(hero, header) */
   .show-menu .header,
   .show-menu .container-hero {
