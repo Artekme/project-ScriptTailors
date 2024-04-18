@@ -114,19 +114,19 @@ function stopAnimation() {
 // Обробник події для наведення курсору
 heroSection.addEventListener('mouseenter', startAnimation);
 
-// Обробник події для дотику
-heroSection.addEventListener('touchstart', startAnimation);
+// // Обробник події для дотику
+// heroSection.addEventListener('touchstart', startAnimation);
 
-// Обробник події для переміщення пальця по екрану
-heroSection.addEventListener('touchmove', startAnimation);
+// // Обробник події для переміщення пальця по екрану
+// heroSection.addEventListener('touchmove', startAnimation);
 
-// Обробник події для завершення дотику
-document.addEventListener('touchend', function (event) {
-    // Перевірка, чи дотик відбувся поза секцією "hero"
-    if (!heroSection.contains(event.target)) {
-        stopAnimation();
-    }
-});
+// // Обробник події для завершення дотику
+// document.addEventListener('touchend', function (event) {
+//     // Перевірка, чи дотик відбувся поза секцією "hero"
+//     if (!heroSection.contains(event.target)) {
+//         stopAnimation();
+//     }
+// });
 
 // Обробник події для відведення курсору
 heroSection.addEventListener('mouseleave', stopAnimation);
