@@ -157,6 +157,11 @@ footer ul {
 }
 
 /*----- MODAL -----*/
+.modal {
+  /* Existing styles */
+  backface-visibility: visible; /* Added */
+}
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -166,7 +171,6 @@ footer ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1000;
   opacity: 0;
-
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
@@ -194,8 +198,17 @@ body.modal-open {
   z-index: 2000;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 343px;
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s ease;
+  width: 288px;
+}
+
+.modal.visible {
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(360deg);
+}
+
+.modal-content {
+  transform: rotateY(180deg); /* Added */
 }
 
 .modal-title {
@@ -214,6 +227,7 @@ body.modal-open {
   line-height: 1.5;
   text-align: center;
 }
+
 .modal-close-btn {
   position: absolute;
   top: 26px;
@@ -227,6 +241,7 @@ body.modal-open {
   padding: 0;
   stroke-width: 2px;
   stroke: #fafafa;
+  height: 22px;
 }
 
 /*----- MODAL -----*/
@@ -303,7 +318,6 @@ body.modal-open {
   }
 
   .modal {
-    max-width: 500px;
     width: 495px;
     padding: 64px 58px;
   }
@@ -352,8 +366,6 @@ body.modal-open {
   .modal-close-btn {
     top: 26px;
     right: 26px;
-  }
-  .close-btn-icon {
     width: 24px;
     height: 24px;
   }
