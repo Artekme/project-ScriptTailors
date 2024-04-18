@@ -36,7 +36,7 @@ const swiperBySection = new Swiper(swiperEl, {
     nextEl: buttonEl,
   },
   slidesPerView: 2,
-  initialSlide: 1,
+  initialSlide: 0,
   breakpoints: {
     767: {
       slidesPerView: 3,
