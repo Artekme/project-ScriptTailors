@@ -15,6 +15,9 @@ html {
   font-family: Inter Tight;
   font-size: 16px;
   font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -40,7 +43,7 @@ html {
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   text-align: left;
   margin-bottom: 8px;
 }

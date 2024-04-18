@@ -4,7 +4,6 @@ import {Navigation, Keyboard, Mousewheel} from 'swiper/modules';
 import 'swiper/css'
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-Swiper.use([Navigation, Keyboard, Mousewheel]);
 
 
 let swiper;
@@ -58,7 +57,7 @@ function renderReview({author, avatar_url, review}) {
 async function renderReviews() {
     const reviewsData = await fetchReviews();
     const reviewsHTML = reviewsData.map(renderReview).join("");
-    const swiperWrapper = document.querySelector('.swiper-wrapper')
+    const swiperWrapper = document.querySelector('.reviews .swiper-wrapper')
 
     if(swiperWrapper){
         swiperWrapper.innerHTML = reviewsHTML;
@@ -96,18 +95,21 @@ function initSwiper() {
         simulateTouch: true,
         updateOnWindowResize: true,
         breakpoints: {
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
             768: {
                 slidesPerView: 2,
                 slidesPerGroup: 1,
             },
-            1400: {
+            1440: {
                 slidesPerView: 4,
                 slidesPerGroup: 1,
             }
         }
         
-})
-    updateNavigationButtons();
+});
 
     swiper.on('slideChange', ()=> {
         updateNavigationButtons()

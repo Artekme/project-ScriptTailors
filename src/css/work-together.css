@@ -1,22 +1,21 @@
 footer {
   padding: 32px 0;
   position: relative;
-  /* background: url('../img/work-together/backgroundMobile.png') repeat-y right; */
+  background: url('../img/work-together/glass-effect2-mob@1x.png') repeat-y
+    right;
 }
 
-/* @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   footer {
-    background: url('../img/work-together/backgroundMobile@2x.png') repeat-y
+    background: url('../img/work-together/glass-effect2-mob@2x.png') repeat-y
       right;
   }
-} */
-
-.container {
-  min-width: 320px;
+}
+.footer-container {
+  margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .footer-title-box {
   display: flex;
   flex-direction: row;
@@ -120,7 +119,7 @@ footer {
   margin-top: 16px;
   background-color: #ed3b44;
 
-  color: inherit;
+  color: #fafafa;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
@@ -158,6 +157,11 @@ footer ul {
 }
 
 /*----- MODAL -----*/
+.modal {
+  /* Existing styles */
+  backface-visibility: visible; /* Added */
+}
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -167,7 +171,9 @@ footer ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1000;
   opacity: 0;
-  transition: opacity 250ms linear;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
 }
 
 .modal-background.visible {
@@ -192,8 +198,17 @@ body.modal-open {
   z-index: 2000;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 343px;
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s ease;
+  width: 288px;
+}
+
+.modal.visible {
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(360deg);
+}
+
+.modal-content {
+  transform: rotateY(180deg); /* Added */
 }
 
 .modal-title {
@@ -212,11 +227,21 @@ body.modal-open {
   line-height: 1.5;
   text-align: center;
 }
-.modal-close {
+
+.modal-close-btn {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 26px;
+  right: 26px;
   cursor: pointer;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  background: transparent;
+  line-height: 1;
+  padding: 0;
+  stroke-width: 2px;
+  stroke: #fafafa;
+  height: 22px;
 }
 
 /*----- MODAL -----*/
@@ -226,21 +251,30 @@ body.modal-open {
     font-size: 14px;
     line-height: 1.2;
   }
+  .footer-container {
+    max-width: 375px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   footer {
     padding-top: 85px;
     padding-bottom: 169px;
-    /* background: url('../img/work-together/backgroundTablet.png') repeat-y right; */
+    background: url('../img/work-together/glass-effect2-tab@1x.png') repeat-y
+      right;
   }
 
-  /* @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     footer {
-      background: url('../img/work-together/backgroundTablet@2x.png') repeat-y
+      background: url('../img/work-together/glass-effect2-tab@2x.png') repeat-y
         right;
     }
-  } */
+  }
+  .footer-container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
   .footer-title-box {
     gap: 7px 20px;
@@ -284,7 +318,6 @@ body.modal-open {
   }
 
   .modal {
-    max-width: 500px;
     width: 495px;
     padding: 64px 58px;
   }
@@ -292,16 +325,15 @@ body.modal-open {
 
 @media screen and (min-width: 1440px) {
   footer {
-    padding-top: 85px;
     padding-bottom: 169px;
-    /* background: url('../img/work-together/backgroundDesktop.png') repeat-y right; */
+    background: url('../img/work-together/glass-effect2@1x.png') repeat-y right;
   }
-  /* @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     footer {
-      background: url('../img/work-together/backgroundDesktop@2x.png') repeat-y
+      background: url('../img/work-together/glass-effect2@2x.png') repeat-y
         right;
     }
-  } */
+  }
 
   .footer-container {
     max-width: 1100px;
@@ -331,16 +363,10 @@ body.modal-open {
     top: 100px;
     left: 70px;
   }
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #494848;
-  border-radius: 10px;
+  .modal-close-btn {
+    top: 26px;
+    right: 26px;
+    width: 24px;
+    height: 24px;
+  }
 }

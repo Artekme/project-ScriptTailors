@@ -1,0 +1,290 @@
+.hero .container {
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  /* margin-bottom: 64px; */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  z-index: 2;
+}
+
+.hero {
+  margin-bottom: 64px;
+}
+
+.container-hero {
+  animation: showElements 1.7s linear forwards;
+}
+
+
+.background-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.background-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/hero/glass-effect1-mob@1x.png');
+  filter: contrast(400%);
+  z-index: -1;
+}
+
+.background-gradient-top {
+  flex-direction: column;
+  display: flex;
+  max-width: 100%;
+  background-image: linear-gradient(
+    -90deg,
+    rgba(28, 29, 32, 1),
+    rgba(28, 29, 32, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .background-wrapper {
+    background-image: url('../img/hero/glass-effect1-mob@2x.png');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+.hero-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 343px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+  margin-bottom: 212px;
+  margin-top: 281px;
+}
+
+/* .container-hero {
+  display: flex;
+  flex-wrap: nowrap;
+} */
+
+.hero-address {
+  max-width: 343px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+}
+
+.hero-address-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 343px;
+  justify-content: center;
+  gap: 4px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.hero-address-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  text-transform: uppercase;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle:hover {
+  transform: scale(1.2); /* Збільшити кнопку на 10% */
+  border: 1px solid #fafafa;
+}
+
+.hero-address-mail-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.circle-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 178px;
+  height: 37px;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-email:hover {
+  transform: scale(1); /* Збільшити кнопку на 10% */
+  border: 1px solid #fafafa;
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-bottom: 64px;
+  }
+
+  .background-wrapper::after {
+    z-index: -1;
+    content: '';
+    background-image: url('../img/hero/glass-effect1-tab@1x.png');
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .hero-title {
+    margin: 0 auto;
+    font-size: 90px;
+    margin-bottom: 187px;
+    margin-top: 300px;
+    max-width: 707px;
+  }
+
+  .hero-address {
+    margin: 0 auto;
+    max-width: 704px;
+    height: 55px;
+    margin-bottom: 32px;
+  }
+
+  .hero-address-list {
+    max-width: 704px;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .hero-address-link {
+    font-size: 16px;
+  }
+
+  .circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .circle:hover {
+    transform: scale(1.2); /* Збільшити кнопку на 10% */
+    border: 1px solid #fafafa;
+  }
+
+  .hero-address-mail-link {
+    font-size: 16px;
+  }
+
+  .circle-email {
+    width: 223px;
+    height: 55px;
+  }
+
+  .container-hero {
+    margin-bottom: 0;
+  }
+
+  .circle-email:hover {
+    transform: scale(1); /* Збільшити кнопку на 10% */
+    border: 1px solid #fafafa;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-device-pixel-ratio: 2) {
+    .background-wrapper {
+      background-image: url('../img/hero/glass-effect1-tab@2x.png');
+    }
+  }
+}
+
+@media screen and (max-width: 373px) {
+  .hero-address-list {
+    gap: 10px;
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1440px) {
+  .background-wrapper::after {
+    z-index: -1; /* Змінено на -1, щоб бути під іншими елементами */
+    content: '';
+    background-image: url('../img/hero/glass-effect1@1x.png');
+    opacity: 1; /* Виправлено значення прозорості */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .hero {
+    margin-bottom: 96px;
+  }
+
+  .hero-title {
+    margin: 0 auto;
+    max-width: 1084px;
+    font-size: 90px;
+    margin-bottom: 243px;
+    margin-top: 300px;
+  }
+
+  .hero-address {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1376px;
+    margin-bottom: 32px;
+  }
+
+  .hero-address-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-device-pixel-ratio: 2) {
+    .background-wrapper {
+      background-image: url('../img/hero/glass-effect1@2x.png');
+    }
+  }
+}
