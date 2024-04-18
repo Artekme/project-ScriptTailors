@@ -16,6 +16,11 @@
   margin-bottom: 64px;
 }
 
+.container-hero {
+  animation: showElements 1.7s linear forwards;
+}
+
+
 .background-wrapper {
   position: relative;
   top: 0;
