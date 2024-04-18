@@ -36,7 +36,6 @@
   }
 }
 
-
 .projects .swiper-slide {
   overflow: hidden;
   border-radius: 24px;
@@ -129,7 +128,7 @@
   display: inline-block;
   border-radius: 60px;
   background: rgb(237, 59, 68);
-  transition: background-color 200ms ease-in-out;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 .link-projects:hover,
 .link-projects:focus {
@@ -165,20 +164,16 @@
   }
 }
 
-
 .buttons-wrapper-projects {
-
   display: flex;
   justify-content: center;
   padding: 2px;
-
 }
 @media screen and (max-width: 767.9px) {
   .buttons-wrapper-projects {
     gap: 12px;
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .buttons-wrapper-projects {
@@ -192,22 +187,27 @@
   pointer-events: none;
 }
 
-.projects .swiper .buttons-wrapper-projects .swiper-button-disabled .left-arrow-icon-projects,
-.projects .swiper .buttons-wrapper-projects .swiper-button-disabled .right-arrow-icon-projects {
+.projects
+  .swiper
+  .buttons-wrapper-projects
+  .swiper-button-disabled
+  .left-arrow-icon-projects,
+.projects
+  .swiper
+  .buttons-wrapper-projects
+  .swiper-button-disabled
+  .right-arrow-icon-projects {
   stroke: rgb(59, 59, 59);
-
-  transform:none
-
+  transform: none;
 }
 /*  */
-
 
 .projects .swiper-button-prev,
 .projects .swiper-button-next {
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 50%;
   background-color: transparent;
-  transition: border-color 200ms ease-in-out;
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .projects .swiper-button-prev:hover,
@@ -217,10 +217,8 @@
   border: 1px solid rgba(250, 250, 250, 0.5);
 }
 
-
 @media screen and (max-width: 767.9px) {
-
-.projects .swiper-button-prev,
+  .projects .swiper-button-prev,
   .projects .swiper-button-next {
     padding: 14px;
     width: 52px;
@@ -239,13 +237,11 @@
 .left-arrow-icon-projects,
 .right-arrow-icon-projects {
   stroke: rgb(250, 250, 250);
-  transition: all 200ms ease-in-out;
+  transition: all var(--transition-duration) var(--transition-timing-function);
 }
-
 
 .projects .swiper-button-prev:hover .left-arrow-icon-projects,
 .projects .swiper-button-next:hover .right-arrow-icon-projects {
-
   transform: scale(1.2);
 }
 
