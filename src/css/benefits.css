@@ -10,7 +10,7 @@ html {
   display: flex;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
   color: rgba(250, 250, 250, 0.4);
   font-family: Inter Tight;
   font-size: 16px;
@@ -45,7 +45,7 @@ html {
   line-height: 30px;
   letter-spacing: -0.02em;
   text-align: left;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
 }
 
 .feuter-desc {
@@ -97,7 +97,7 @@ html {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .benefits-item {
-    margin-bottom: 32px;
+    padding-bottom: 32px;
   }
 
   .benefits-item-descr {
@@ -108,7 +108,7 @@ html {
 
 @media screen and (min-width: 768px) {
   .benefits-section {
-    margin-bottom: 71px;
+    padding-bottom: 71px;
   }
 
   .benefits-item {
@@ -128,7 +128,7 @@ html {
 
 @media screen and (min-width: 1440px) {
   .benefits-section {
-    margin-bottom: 139px;
+    padding-bottom: 139px;
   }
 
   .benefits-wrapper {
