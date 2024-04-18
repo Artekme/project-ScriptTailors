@@ -1,30 +1,42 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.css';
 import axios from 'axios';
-
+// DOM Elements
 const body = document.querySelector('body');
-const btnSubmit = document.querySelector('.btn-submit');
 const modalBack = document.querySelector('.modal-background');
-const modalClose = document.querySelector('.modal-close-btn');
 const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal-close-btn');
+const btnSubmit = document.querySelector('.btn-submit');
+const form = document.querySelector('.footer-form');
+const emailInput = document.querySelector('input[name="email"]');
+
+// Event Listeners
 modalClose.addEventListener('click', closeModal);
+modalBack.addEventListener('click', closeModal);
+btnSubmit.addEventListener('click', handleSubmit);
+emailInput.addEventListener('focus', handleEmailFocus);
+emailInput.addEventListener('blur', handleEmailBlur);
 
-btnSubmit.addEventListener('click', event => {
-  const emailForm = form.elements.email.value.trim();
-  const commentsForm = form.elements.comments.value.trim();
-  if (!emailForm || !commentsForm) {
-    event.preventDefault();
-    iziToast.warning({
-      message: 'Please fill out all fields',
-      progressBar: false,
-      position: 'bottomCenter',
-      color: '#1c1d20',
-      messageColor: '#fafafa',
-      titleColor: '#fafafa',
-    });
+// Functions
+function handleSubmit(event) {
+  event.preventDefault();
+  const userEmail = form.elements.email.value.trim();
+  const userComment = form.elements.comments.value.trim();
+
+  if (userEmail && userComment) {
+    const options = { email: userEmail, comment: userComment };
+    postRequestPortfolioApi(options)
+      .then(() => {
+        form.reset(); // Clear input fields
+        showModal();
+      })
+      .catch(() => {
+        showErrorToast();
+      });
+  } else {
+    showWarningToast();
   }
-});
-
+}
 function closeModal(ev) {
   if (
     (ev.type === 'click' && ev.currentTarget === modalClose) ||
@@ -38,63 +50,60 @@ function closeModal(ev) {
   }
 }
 
-const form = document.querySelector('.footer-form');
-const emailInput = document.querySelector('input[name="email"]');
-form.addEventListener('submit', handSubmit);
-
-function handSubmit(event) {
-  event.preventDefault();
-  const userEmail = event.target.email.value.trim();
-  const userComment = event.target.comments.value.trim();
-
-  if (userEmail && userComment) {
-    const options = {
-      email: userEmail,
-      comment: userComment,
-    };
-    postRequestPortfolioApi(options)
-      .then(() => {
-        form.reset();
-        modalBack.classList.add('visible');
-        document.addEventListener('keydown', closeModal);
-        modalBack.addEventListener('click', closeModal);
-        body.classList.add('modal-open');
-      })
-      .catch(() => {
-        iziToast.error({
-          title: 'Oops!',
-          message: 'Something went wrong',
-          progressBar: false,
-          position: 'topCenter',
-          color: '#1c1d20',
-          messageColor: '#fafafa',
-          titleColor: '#fafafa',
-        });
-      });
-  }
+function showModal() {
+  modalBack.classList.add('visible');
+  body.classList.add('modal-open');
+  modal.classList.add('visible');
 }
 
-emailInput.addEventListener('focus', () => {
+function handleEmailFocus() {
   if (form.classList.contains('success-email')) {
     form.classList.remove('success-email');
   }
   if (form.classList.contains('failed-email')) {
     form.classList.remove('failed-email');
   }
-});
+}
 
-emailInput.addEventListener('blur', () => {
+function handleEmailBlur() {
   if (emailInput.checkValidity()) {
     form.classList.add('success-email');
   } else {
     form.classList.add('failed-email');
   }
-});
+}
 
-let postRequestPortfolioApi = async set => {
-  return await axios
-    .post('https://portfolio-js.b.goit.study/api/requests', set)
-    .then(res => {
-      return res.data;
-    });
-};
+async function postRequestPortfolioApi(data) {
+  try {
+    const response = await axios.post(
+      'https://portfolio-js.b.goit.study/api/requests',
+      data
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+function showWarningToast() {
+  iziToast.warning({
+    message: 'Please fill out all fields',
+    progressBar: false,
+    position: 'bottomCenter',
+    color: '#1c1d20',
+    messageColor: '#fafafa',
+    titleColor: '#fafafa',
+  });
+}
+
+function showErrorToast() {
+  iziToast.error({
+    title: 'Oops!',
+    message: 'Something went wrong',
+    progressBar: false,
+    position: 'topCenter',
+    color: '#1c1d20',
+    messageColor: '#fafafa',
+    titleColor: '#fafafa',
+  });
+}
